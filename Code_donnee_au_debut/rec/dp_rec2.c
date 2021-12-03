@@ -1,19 +1,16 @@
-void p_rec(const int Vmax, struct objects_t *object_set, struct retained_t *bagpack) {
-    const int nb_objects = object_set->nb_objects;
+void prec(const int Vmax, struct objects_t *obj_set, struct retained_t *bag) {
+    const int nb_objects = obj_set->nb_objects;
     struct retained_t *duplicata = ...;
     bagcpy(...);
-    // Prediction : the bag utility before any new object put into it
-    int first = object_set->first_idx;
     struct retained_t *best_bagpack = ...;
-    bagcpy(...);
-    // Verification by trying the other objects
-    for (int obj_idx ...) {
+    bagcpy(...);// Pred: best bag is bag
+    for (int obj_idx = obj_set->first_idx ...) {// Verif: Try new objects
         struct object_t *ptr_object = ...;
         int curr_volume = ...;
         if (...) {
             bagcpy(...);
             push_object_in_bag(...);
-            object_set->first_idx = ...;
+            obj_set->first_idx = ...;
             p_rec(...);
             if (...) {
                 clean_bag(...);
@@ -24,5 +21,4 @@ void p_rec(const int Vmax, struct objects_t *object_set, struct retained_t *bagp
     clean_bag(bagpack);
     bagcpy(bagpack, best_bagpack);
     free_bag(best_bagpack);
-    free_bag(duplicata);
 }

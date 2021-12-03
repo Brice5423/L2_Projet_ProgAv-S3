@@ -8,13 +8,9 @@ void view_opt(const struct states_array_t *states) {
         printf("%3d |\t", obj);
         for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
             int idx = obj * (states->Vmax + 1) + bag;
-            if (states->OPT[idx] == INFTY) {
-                printf("INF\t");
-            } else if (states->OPT[idx] == UNDTR) {
-                printf("UND\t");
-            } else {
-                printf("%2d\t", states->OPT[idx]);
-            }
+            if (states->OPT[idx] == INFTY) printf("INF\t");
+            else if (states->OPT[idx] == UNDTR) printf("UND\t");
+            else printf("%2d\t", states->OPT[idx]);
         }
         printf("\n");
     }

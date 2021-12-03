@@ -14,4 +14,3 @@ int main(int argc, char **argv) {
         fprintf(stderr, "\t* use_i is for #i object's utility, i in {1, ... , n}");
         exit(-1);
     }
-//}
