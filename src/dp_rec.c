@@ -15,6 +15,7 @@ void prec(const int Vmax, struct objects_t *obj_set, struct retained_t *bag) {
     for (int obj_idx = obj_set->first_idx ...) {// Verif: Try new objects
         struct object_t *ptr_object = ...;
         int curr_volume = ...;
+
         if (...) {
             bagcpy(...);
             push_object_in_bag(...);
