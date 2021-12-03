@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 
 #include "../include/space_array.h"
 
@@ -27,14 +28,20 @@ void push_object_in_array(struct states_array_t *S, struct objects_t *LO, int i)
         int curr = ...; // Calculer l'index de l'état pour l'objet (i)
         int OPT1 = S->OPT[pred];
         S->CHM[curr] = INFTY; //hyp.: l'objet i n'est pas dans le sac
+
         if (...) { // S'il y a de la place dans le sac
             int pred_without_i = ...; // L'index du bag SANS l'objet (i)
             int OPT2 = ...;
+
             if (...) { // Sélectionne la meilleur configuration
                 S->OPT[curr] = ...;
                 S->CHM[curr] = ...; // Noter que l'objet i est dans le sac
-            } else states->OPT[curr] = ...;
-        } else states->OPT[curr] = ...; // S'il n'y a pas de place
+            } else {
+                states->OPT[curr] = ...;
+            }
+        } else {
+            states->OPT[curr] = ...; // S'il n'y a pas de place
+        }
     }
 }
 

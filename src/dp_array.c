@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <assert.h>
 
 void dp_array(const bool utility, const int Vmax, const struct objects_t *objects) {
     struct states_array_t *states = new_states_array(objects->nb_objects, Vmax);

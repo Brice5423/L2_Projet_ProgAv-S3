@@ -21,6 +21,7 @@ void prec(const int Vmax, struct objects_t *obj_set, struct retained_t *bag) {
             push_object_in_bag(...);
             obj_set->first_idx = ...;
             p_rec(...);
+
             if (...) {
                 clean_bag(...);
                 bagcpy(...);
