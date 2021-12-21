@@ -8,6 +8,7 @@
 // Voit TP5
 
 #include "elmlist.h"
+
 #include <stdbool.h>
 
 /**
@@ -16,7 +17,8 @@ Abstract type for double-linked list modeled by
 - the number of element the list contains
 */
 struct list_t {
-    struct elmlist_t * head, * tail;
+    struct elmlist_t *head;
+    struct elmlist_t *tail;
     int numelm;
 };
 
@@ -24,41 +26,41 @@ struct list_t {
 Constructors & co
 ****************/
 /** Create empty list  */
-struct list_t * new_list();
+struct list_t *new_list();
 
-struct list_t * listcpy(const struct list_t * L);
+struct list_t *listcpy(const struct list_t *L);
 
 /** Delete list its elements and possibly the data they hold */
-void del_list(struct list_t * L, void (*ptrf) ());
+void del_list(struct list_t *L, void (*ptrf)());
 
 /** Is list L empty ? */
-bool is_empty(const struct list_t * L);
+bool is_empty(const struct list_t *L);
 
 /********************
 Accessors & modifiers
 ********************/
 /** Gimme the head of L*/
-struct elmlist_t * get_head(const struct list_t * L);
+struct elmlist_t *get_head(const struct list_t *L);
 
 /** Gimme the tail of L */
-struct elmlist_t * get_tail(const struct list_t * L);
+struct elmlist_t *get_tail(const struct list_t *L);
 
 /** How many elements does the list contain ? */
-int get_numelm(const struct list_t * L);
+int get_numelm(const struct list_t *L);
 
 /***************************
  * Advanced member functions
  ***************************/
 /** Add a brand new list element holding data to the head of L */
-void cons(struct list_t * L, void * data);
+void cons(struct list_t *L, void *data);
 
 /** Add  a brand new list element holding data to the tail of L */
-void queue(struct list_t * L, void * data);
+void queue(struct list_t *L, void *data);
 
 /** Insert data at place localized by cmp_ptr */
-void insert_ordered(struct list_t * L, void * data, bool (*cmp_ptrf)());
+void insert_ordered(struct list_t *L, void *data, bool (*cmp_ptrf)());
 
 /** Display list on stdout stream */
-void view_list(struct list_t * L, void (*ptrf)());
+void view_list(struct list_t *L, void (*ptrf)());
 
 #endif //PROJET_PROGAV_S3_LIST_H

@@ -12,6 +12,6 @@
 #include <stdbool.h>
 #include <assert.h>
 
-void dp_array(const int Vmax, const struct objects_t * objects);
+void dp_array(const int Vmax, const struct objects_t *objects);
 
 #endif //PROJET_PROGAV_S3_DP_ARRAY_H

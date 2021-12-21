@@ -26,7 +26,7 @@ struct retained_t *new_bag();
 
 /** @brief Fait un duplicata d’un sac-à-dos.
  * (Voir sujet, diapo 16 à 18) */
-void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack);
+void bagcpy(struct retained_t *newbagpack, const struct retained_t *bagpack);
 
 /** @brief Libère la mémoire occupée par un sac-à-dos.
  * (Voir sujet, diapo 16 à 18) */

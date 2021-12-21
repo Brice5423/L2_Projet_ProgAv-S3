@@ -5,8 +5,9 @@
 #ifndef PROJET_PROGAV_S3_STATES_H
 #define PROJET_PROGAV_S3_STATES_H
 
-#include <stdbool.h>
 #include "global.h"
+
+#include <stdbool.h>
 
 struct dyn_state_t {
     struct list_t *object_list;
