@@ -12,14 +12,14 @@ void dp_array(const bool utility, const int Vmax, const struct objects_t *object
 
     for (int i = 1; i <= objects->nb_objects; i += 1) {
         #ifdef _TRACE_
-            printf("#%d Object\n", i);
+                printf("#%d Object\n", i);
         #endif
 
         push_object_in_array(states, objects, i);
 
         #ifdef _TRACE_
-            view_opt(states);
-            view_chm(states);
+                view_opt(states);
+                    view_chm(states);
         #endif
     }
 

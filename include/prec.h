@@ -4,6 +4,8 @@
 #include "objects.h"
 #include "bag.h"
 
+#include <stdio.h>
+
 struct retained_t {
     struct list_t *objects_list;
     int utilities_sum;

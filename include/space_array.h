@@ -1,6 +1,9 @@
 #ifndef PROJET_PROGAV_S3_SPACE_ARRAY_H
 #define PROJET_PROGAV_S3_SPACE_ARRAY_H
 
+#include <stdio.h>
+#include <assert.h>
+
 typedef int state_t;
 struct states_array_t {
     state_t *OPT;            // Matrice d'états proprement dite

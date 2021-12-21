@@ -1,6 +1,9 @@
 #ifndef PROJET_PROGAV_S3_OBJECTS_H
 #define PROJET_PROGAV_S3_OBJECTS_H
 
+#include <stdio.h>
+#include <stdbool.h>
+
 struct object_t {
     int volume;
     int utility;

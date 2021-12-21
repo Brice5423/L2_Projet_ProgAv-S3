@@ -1,33 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
 #include "../include/global.h"
 #include "../include/prec.h"
 #include "../include/objects.h"
 #include "../include/space_array.h"
 
-
-/* ***** ***** ***** main2 ***** ***** ***** */
-const char mode = argv[1][0];
-const bool utility = (atoi(argv[2]) == 0) ? false : true;
-const int Vmax = atoi(argv[3]);
-
-struct retained_t *retained_objects = new_bag();
-struct objects_t *object_set = new_objects(argc, argv, utility);
-
-#ifdef _TRACE_
-    fprintf(stderr, "mode=%c usefullness=%c Vmax=%d\n", mode, (utility)?'U':'N', Vmax);
-    fprintf(stderr, "Object set full with %d objects\n", object_set->nb_objects);
-    view_objet_set(object_set);
-#endif
-/* ***** ***** ***** ***** ***** ***** ***** */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 int main(int argc, char **argv) {
+    /* ***** ***** main1 ***** ***** */
     /** @brief main parameters are :
       * - argc : # of parameters
-    * - argv : a vector of string ; each one is a parameter (as a string) */
+      * - argv : a vector of string ; each one is a parameter (as a string) */
     if (argc < 4) {
         fprintf(stderr, "USAGE\n\tdp Mode(R|A|L) Utilié(0|1) Vmax vol_1, use_1 ..., vol_n, use_n\n");
         fprintf(stderr, "\t* Mode is\n");
@@ -41,7 +25,20 @@ int main(int argc, char **argv) {
         exit(-1);
     }
 
-    /* ***** main2 ***** */
+    /* ***** ***** main2 ***** ***** */
+
+    const char mode = argv[1][0];
+    const bool utility = (atoi(argv[2]) == 0) ? false : true;
+    const int Vmax = atoi(argv[3]);
+    struct retained_t *retained_objects = new_bag();
+    struct objects_t *object_set = new_objects(argc, argv, utility);
+
+    #ifdef _TRACE_
+        fprintf(stderr, "mode=%c usefullness=%c Vmax=%d\n", mode, (utility) ? 'U' : 'N', Vmax);
+        fprintf(stderr, "Object set full with %d objects\n", object_set->nb_objects);
+        view_objet_set(object_set);
+    #endif
+
     if (mode == 'R') {
         struct retained_t *my_bag = new_bag();
         prec(Vmax, object_set, my_bag);

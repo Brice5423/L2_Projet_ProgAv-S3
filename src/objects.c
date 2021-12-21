@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdbool.h>
-
 #include "../include/objects.h"
-
 
 struct objects_t *new_objects(int argc, char **argv, bool utility) {
     struct objects_t *set = ...;
@@ -13,15 +9,16 @@ struct objects_t *new_objects(int argc, char **argv, bool utility) {
 
     if (utility) {
         int j;
+
         for (i = offset, j = 0; i < argc; i += 2, j += 1) {
             /** TODO **/
         }
+
     } else {
         for (i = offset; i < argc; i += 1) {
             /** TODO **/
         }
     }
-
     return set;
 }
 
@@ -31,10 +28,6 @@ void view_object(struct object_t *object) {
 
 void view_objet_set(struct objects_t *set) {
     printf("\n*** View objet set ***\n");
-
-    for (int o = 0; o < set->nb_objects; o += 1) {
-        view_object(set->objects + o);
-    }
-
+    for (int o = 0; o < set->nb_objects; o += 1) view_object(set->objects + o);
     printf("\n**********************\n");
 }
