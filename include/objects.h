@@ -3,10 +3,10 @@
 
 #include "global.h"
 
-//#include <stdio.h>
-//#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
-//#include <assert.h>
+#include <assert.h>
 
 /** @brief (Voir sujet, diapo 11 à 13)
  * @struct int volume : volume de l'objet

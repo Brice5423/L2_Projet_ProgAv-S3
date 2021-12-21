@@ -1,5 +1,5 @@
 #include "../include/dp_rec.h"
-#include "../include/space_array.h"
+#include "../include/dp_array.h"
 
 int main(int argc, char **argv) {
     /* ***** ***** main1 ***** ***** */

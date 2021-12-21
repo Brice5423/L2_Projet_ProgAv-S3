@@ -25,4 +25,12 @@ ________________________
 
 - `newbagpack` deviendra `newBagpack`
 
-## Fonctionnement 
+
+## Agencement des includes dans les fichiers `.h`
+
+Voici l'agencement des différents `#include` dans le projet :  
+![L'image n'a pas réussi à ce charger (image/Projet_ProgAv_Gestion_des_.h.drawio.png)](image/Projet_ProgAv_Gestion_des_.h.drawio.png)
+
+## Fonctionnement
+
+###

@@ -1,15 +1,9 @@
-//
-// Created by brice on 21/12/2021.
-//
-
 #ifndef PROJET_PROGAV_S3_LIST_H
 #define PROJET_PROGAV_S3_LIST_H
 
 // Voit TP5
 
 #include "elmlist.h"
-
-#include <stdbool.h>
 
 /**
 Abstract type for double-linked list modeled by

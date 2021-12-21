@@ -1,7 +1,6 @@
 #ifndef PROJET_PROGAV_S3_DP_REC_H
 #define PROJET_PROGAV_S3_DP_REC_H
 
-#include "objects.h"
 #include "bag.h"
 
 /** @brief Nom dans le sujet : p_rec.
