@@ -1,14 +1,9 @@
-#include "../include/global.h"
-#include "../include/prec.h"
-#include "../include/objects.h"
+#include "../include/dp_rec.h"
 #include "../include/space_array.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 
 int main(int argc, char **argv) {
     /* ***** ***** main1 ***** ***** */
+
     /** @brief main parameters are :
       * - argc : # of parameters
       * - argv : a vector of string ; each one is a parameter (as a string) */
