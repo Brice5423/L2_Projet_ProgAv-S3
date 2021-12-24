@@ -1,8 +1,12 @@
 #include "../include/objects.h"
 
 struct objects_t *new_objects(const int argc, char **argv, bool utility) {
-    struct objects_t *set = ...;
-    int i, offset = 4;
+    struct objects_t *set;
+    int offset;
+    int i;
+
+    set = ...; // taille de la mémoire
+    offset = 4;
 
     set->nb_objects = (utility) ? (argc - offset) / 2 : (argc - offset);
     set->objects = ...;

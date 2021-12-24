@@ -8,14 +8,14 @@ struct states_array_t {
     state_t *OPT; // Matrice d'états proprement dite
     state_t *CHM; // Matrice des chemins dans la matrice d'états
     int num_obj; // Dimensions de la matrice d'états
-    int Vmax;
+    int VMax;
 };
 
-/** @brief Libérer la mémoire occupée par lamatrice d'états */
+/** @brief Libérer la mémoire occupée par la matrice d'états */
 void free_states_array(struct states_array_t *states);
 
 /** @brief Créer une matrice d'états ET l'initialiser à "vide" */
-struct states_array_t *new_states_array(const int num_objects, const int Vmax);
+struct states_array_t *new_states_array(const int num_objects, const int VMax);
 
 /** @brief Ajouter un objet dans les états "valides" de la matrice */
 void push_object_in_array(struct states_array_t *states, const struct objects_t *objects, int i);

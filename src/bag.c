@@ -5,7 +5,9 @@
 #include "../include/bag.h"
 
 struct retained_t *new_bag() {
-    struct retained_t *bagpack = ...;
+    struct retained_t *bagpack;
+
+    bagpack = ...; // taille de la mémoire
 
     bagpack->objects_list = ...;
     assert(bagpack->objects_list);
@@ -13,9 +15,9 @@ struct retained_t *new_bag() {
     return bagpack;
 }
 
-void bagcpy(struct retained_t *newbagpack, const struct retained_t *bagpack) {
-    newbagpack->objects_list = listcpy(bagpack->objects_list);
-    newbagpack->utilities_sum = bagpack->utilities_sum;
+void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack) {
+    newBagpack->objects_list = listcpy(bagpack->objects_list);
+    newBagpack->utilities_sum = bagpack->utilities_sum;
 }
 
 void free_bag(struct retained_t *bagpack) {

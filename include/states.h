@@ -20,7 +20,7 @@ void push_state(states_t *ptr_states, struct dyn_state_t *S);
 
 void view_states_list(states_t *states);
 
-void free_states_list(states_t *states, void (*ptr_fct)());
+void free_states_list(states_t *states, void (*ptrF)());
 
 void free_state(struct dyn_state_t *S);
 

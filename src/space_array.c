@@ -6,7 +6,9 @@ void free_states_array(struct states_array_t *states) {
 }
 
 struct states_array_t *new_states_array(const int num_objects, const int Vmax) {
-    struct states_array_t *NS = ...;
+    struct states_array_t *NS;
+
+    NS = ...;
     assert(NS != NULL);
 
     /** TODO */
@@ -20,15 +22,22 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
      * tandis qu'ils sont rangés à partue de 1 dans OPT (et CHM) */
     for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
         // Parcourir chaque état du sac-à-dos
-        int pred = ...; // Calculer l'index de l'état pour l'objet (i-1)
-        int curr = ...; // Calculer l'index de l'état pour l'objet (i)
-        int OPT1 = states->OPT[pred];
+        int pred;
+        int curr;
+        int OPT1;
+
+        pred = ...; // Calculer l'index de l'état pour l'objet (i-1)
+        curr = ...; // Calculer l'index de l'état pour l'objet (i)
+        OPT1 = states->OPT[pred];
 
         states->CHM[curr] = INFTY; //hyp.: l'objet i n'est pas dans le sac
 
         if (...) { // S'il y a de la place dans le sac
-            int pred_without_i = ...; // L'index du bag SANS l'objet (i)
-            int OPT2 = ...;
+            int pred_without_i;
+            int OPT2;
+
+            pred_without_i = ...; // L'index du bag SANS l'objet (i)
+            OPT2 = ...;
 
             if (...) { // Sélectionne la meilleur configuration
                 states->OPT[curr] = ...;
@@ -47,61 +56,75 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
  * Connais pas le but de cette fonction
  */
 void init_opt_chm(struct states_array_t *states) {
+    int obj;
+    int bag;
+    int idx;
+
     states->OPT = ...;
     states->CHM = ...;
 
-    for (int obj = 1; obj <= states->num_obj; obj += 1) {
-        for (int bag = 0; bag <= states->Vmax; bag += 1) {
-            int idx = ...;
+    for (obj = 1; obj <= states->num_obj; obj++) {
+        for (bag = 0; bag <= states->VMax; bag++) {
+            idx = ...;
 
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
         }
     }
 
-    for (int bag = 0; bag <= states->Vmax; bag += 1) {
+    for (bag = 0; bag <= states->VMax; bag += 1) {
         states->CHM[bag] = UNDTR;
     }
 }
 
 void view_path_array(const struct states_array_t *states, const struct objects_t *set) {
-    int obj = states->num_obj;
-    int vol = states->Vmax;
-    int idx = obj * (states->Vmax + 1) + vol;
+    bool nonStop;
+    int obj;
+    int vol;
+    int idx;
 
-    bool nonstop = (obj == 0); // avant il avait des "stop" au lui de "nonstop"  (sauf sur cette ligne)
+    obj = states->num_obj;
+    vol = states->VMax;
+    idx = obj * (vol + 1) + vol;
+
+    nonStop = (obj == 0);
     printf("******\nTotal packaging utility : %d\n******\n", states->OPT[idx]);
 
-    while (!nonstop) {
+    while (!nonStop) {
         if (states->CHM[idx] != INFTY) { // object actually put in bag
             printf("\tobjet #%d(%d, %d)\n", obj, set->objects[obj - 1].volume, set->objects[obj - 1].utility);
-            nonstop = (states->CHM[idx] == 0);
+            nonStop = (states->CHM[idx] == 0);
             vol = states->CHM[idx];
         }
 
         obj -= 1;
-        nonstop = nonstop || (obj == 0);
-        idx = obj * (states->Vmax + 1) + vol;
+        nonStop = nonStop || (obj == 0);
+        idx = obj * (states->VMax + 1) + vol;
     }
     printf("\n");
 }
 
 void view_opt(const struct states_array_t *states) {
+    int bag;
+    int obj;
+    int idx;
+
     printf("OPT |\t");
-    for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
+    for (bag = 0; bag < (states->VMax + 1); bag++) {
         printf("%2d\t", bag);
     }
+
     printf("\n----|");
-    for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
+    for (bag = 0; bag < (states->VMax + 1); bag++) {
         printf("--------");
     }
-    printf("\n");
 
-    for (int obj = 0; obj < (states->num_obj + 1); obj += 1) {
+    printf("\n");
+    for (obj = 0; obj < (states->num_obj + 1); obj++) {
         printf("%3d |\t", obj);
 
-        for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
-            int idx = obj * (states->Vmax + 1) + bag;
+        for (bag = 0; bag < (states->VMax + 1); bag++) {
+            idx = obj * (states->VMax + 1) + bag;
 
             if (states->OPT[idx] == INFTY) {
                 printf("INF\t");
@@ -118,21 +141,26 @@ void view_opt(const struct states_array_t *states) {
 }
 
 void view_chm(const struct states_array_t *states) {
+    int bag;
+    int obj;
+    int idx;
+
     printf("CHM |\t");
-    for(int bag = 0; bag < (states->Vmax + 1); bag += 1) {
+    for(bag = 0; bag < (states->VMax + 1); bag++) {
         printf("%2d\t", bag);
     }
+
     printf("\n----|");
-    for(int bag = 0; bag < (states->Vmax + 1); bag += 1) {
+    for(bag = 0; bag < (states->VMax + 1); bag++) {
         printf("--------");
     }
-    printf("\n");
 
-    for(int obj = 0; obj < (states->num_obj + 1); obj += 1) {
+    printf("\n");
+    for(obj = 0; obj < (states->num_obj + 1); obj++) {
         printf("%3d |\t", obj);
 
-        for(int bag = 0; bag < (states->Vmax + 1); bag += 1) {
-            int idx = obj * (states->Vmax + 1) + bag;
+        for(bag = 0; bag < (states->VMax + 1); bag++) {
+            idx = obj * (states->VMax + 1) + bag;
 
             if(states->CHM[idx] == INFTY) {
                 printf("PRE\t");

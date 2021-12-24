@@ -23,8 +23,9 @@ ________________________
 - `newbagpack` -> `newBagpack`
 - `ptrf` -> `ptrF`
 - `numelm` -> `numElm`
-- `ptrf` & `cmp_ptrf` => `ptrF`
-
+- `ptrf` & `cmp_ptrf` & `ptr_fct` => `ptrF`
+- `Vmax` -> `VMax`
+- `nonstop` -> `nonStop`
 
 ## Agencement des includes dans les fichiers `.h`
 

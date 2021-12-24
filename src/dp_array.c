@@ -4,8 +4,10 @@
 
 #include "../include/dp_array.h"
 
-void dp_array(const int Vmax, const struct objects_t *objects) {
-    struct states_array_t *states = new_states_array(objects->nb_objects, Vmax);
+void dp_array(const int VMax, const struct objects_t *objects) {
+    struct states_array_t *states;
+
+    states = new_states_array(objects->nb_objects, VMax);
     assert(states != NULL);
 
     #ifdef _TRACE_

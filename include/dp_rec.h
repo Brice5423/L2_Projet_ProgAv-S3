@@ -5,6 +5,6 @@
 
 /** @brief Nom dans le sujet : p_rec.
  * (Voir sujet, diapo 19 à 23) */
-void prec(const int Vmax, struct objects_t *object_set, struct retained_t *bagpack);
+void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpack);
 
 #endif //PROJET_PROGAV_S3_DP_REC_H
