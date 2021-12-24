@@ -1,9 +1,7 @@
 #ifndef PROJET_PROGAV_S3_STATES_H
 #define PROJET_PROGAV_S3_STATES_H
 
-#include "global.h"
-
-#include <stdbool.h>
+#include "objects.h"
 
 struct dyn_state_t {
     struct list_t *object_list;

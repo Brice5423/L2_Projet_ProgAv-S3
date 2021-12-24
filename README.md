@@ -18,19 +18,15 @@ ________________________
 
 - Le fichier `prec.h` est renommé en `db_rec.h`. `db_rec.c` et `db_rec.h` les mêmes noms pour la même chose.
 
-### Fonctions changer
-
-### Structure changer
-
 ### Variables changer
 
 - `newbagpack` deviendra `newBagpack`
 
-
 ## Agencement des includes dans les fichiers `.h`
 
 Voici l'agencement des différents `#include` dans le projet :  
-![L'image n'a pas réussi à ce charger (image/Projet_ProgAv_Gestion_des_.h.drawio.png)](image/Projet_ProgAv_Gestion_des_.h.drawio.png)
+![L'image n'a pas réussi à se charger (image/Projet_ProgAv_Gestion_des_.h.drawio.png)](image/Projet_ProgAv_Gestion_des_.h.drawio.png)  
+> Les trois derniers blocs en rose _(dp_rec.h, dp_array.h et dp_list.h)_ sont les trois `#include` à faire dans le `main.c` pour qu'il puisse fonctionner.
 
 ## Fonctionnement
 

@@ -13,9 +13,9 @@ struct retained_t *new_bag() {
     return bagpack;
 }
 
-void bagcpy(struct retained_t *duplicata, const struct retained_t *bagpack) {
-    duplicata->objects_list = listcpy(bagpack->objects_list);
-    duplicata->utilities_sum = bagpack->utilities_sum;
+void bagcpy(struct retained_t *newbagpack, const struct retained_t *bagpack) {
+    newbagpack->objects_list = listcpy(bagpack->objects_list);
+    newbagpack->utilities_sum = bagpack->utilities_sum;
 }
 
 void free_bag(struct retained_t *bagpack) {

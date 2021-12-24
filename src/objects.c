@@ -1,6 +1,6 @@
 #include "../include/objects.h"
 
-struct objects_t *new_objects(int argc, char **argv, bool utility) {
+struct objects_t *new_objects(const int argc, char **argv, bool utility) {
     struct objects_t *set = ...;
     int i, offset = 4;
 
@@ -22,11 +22,11 @@ struct objects_t *new_objects(int argc, char **argv, bool utility) {
     return set;
 }
 
-void view_object(struct object_t *object) {
+void view_object(const struct object_t *object) {
     printf("(%d , %d) ", object->volume, object->utility);
 }
 
-void view_objet_set(struct objects_t *set) {
+void view_objet_set(const struct objects_t *set) {
     printf("\n*** View objet set ***\n");
     for (int o = 0; o < set->nb_objects; o += 1) view_object(set->objects + o);
     printf("\n**********************\n");

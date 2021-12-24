@@ -1,5 +1,6 @@
 #include "../include/dp_rec.h"
 #include "../include/dp_array.h"
+#include "../include/dp_list.h"
 
 int main(int argc, char **argv) {
     /* ***** ***** main1 ***** ***** */
