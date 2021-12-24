@@ -5,9 +5,11 @@
 #ifndef PROJET_PROGAV_S3_ELMLIST_H
 #define PROJET_PROGAV_S3_ELMLIST_H
 
-// Voir TP5 (list_elm)
-
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
+//#include <string.h>
+#include <assert.h>
 
 /**
 Abstract type modeling a list element containing
@@ -22,7 +24,7 @@ struct elmlist_t {
 
 struct elmlist_t *new_elmlist(void *data);
 
-void del_elmlist(struct elmlist_t *E, void (*ptrf)());
+void del_elmlist(struct elmlist_t *E, void (*ptrF)());
 
 struct elmlist_t *get_suc(struct elmlist_t *E);
 
@@ -36,6 +38,6 @@ void set_pred(struct elmlist_t *E, struct elmlist_t *P);
 
 void set_data(struct elmlist_t *E, void *data);
 
-void view_elmlist(struct elmlist_t *E, void (*ptrf)());
+void view_elmlist(struct elmlist_t *E, void (*ptrF)());
 
 #endif //PROJET_PROGAV_S3_ELMLIST_H

@@ -20,7 +20,11 @@ ________________________
 
 ### Variables changer
 
-- `newbagpack` deviendra `newBagpack`
+- `newbagpack` -> `newBagpack`
+- `ptrf` -> `ptrF`
+- `numelm` -> `numElm`
+- `ptrf` & `cmp_ptrf` => `ptrF`
+
 
 ## Agencement des includes dans les fichiers `.h`
 

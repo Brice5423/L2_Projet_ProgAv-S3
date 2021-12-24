@@ -1,8 +1,6 @@
 #ifndef PROJET_PROGAV_S3_LIST_H
 #define PROJET_PROGAV_S3_LIST_H
 
-// Voit TP5
-
 #include "elmlist.h"
 
 /**
@@ -13,7 +11,7 @@ Abstract type for double-linked list modeled by
 struct list_t {
     struct elmlist_t *head;
     struct elmlist_t *tail;
-    int numelm;
+    int numElm;
 };
 
 /****************
@@ -25,7 +23,7 @@ struct list_t *new_list();
 struct list_t *listcpy(const struct list_t *L);
 
 /** Delete list its elements and possibly the data they hold */
-void del_list(struct list_t *L, void (*ptrf)());
+void del_list(struct list_t *L, void (*ptrF)());
 
 /** Is list L empty ? */
 bool is_empty(const struct list_t *L);
@@ -52,9 +50,9 @@ void cons(struct list_t *L, void *data);
 void queue(struct list_t *L, void *data);
 
 /** Insert data at place localized by cmp_ptr */
-void insert_ordered(struct list_t *L, void *data, bool (*cmp_ptrf)());
+void insert_ordered(struct list_t *L, void *data, bool (*ptrF)());
 
 /** Display list on stdout stream */
-void view_list(struct list_t *L, void (*ptrf)());
+void view_list(struct list_t *L, void (*ptrF)());
 
 #endif //PROJET_PROGAV_S3_LIST_H
