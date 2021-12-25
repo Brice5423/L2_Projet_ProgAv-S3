@@ -7,7 +7,7 @@
 struct retained_t *new_bag() {
     struct retained_t *bagpack;
 
-    bagpack = ...; // taille de la mémoire
+    bagpack = (struct retained_t *) calloc(1, sizeof(struct retained_t));
 
     bagpack->objects_list = ...;
     assert(bagpack->objects_list);

@@ -5,7 +5,7 @@ struct objects_t *new_objects(const int argc, char **argv, bool utility) {
     int offset;
     int i;
 
-    set = ...; // taille de la mémoire
+    set = (struct objects_t *) calloc(1, sizeof(struct objects_t));
     offset = 4;
 
     set->nb_objects = (utility) ? (argc - offset) / 2 : (argc - offset);
@@ -14,7 +14,7 @@ struct objects_t *new_objects(const int argc, char **argv, bool utility) {
     if (utility) {
         int j;
 
-        for (i = offset, j = 0; i < argc; i += 2, j += 1) {
+        for (i = offset, j = 0; i < argc; i += 2, j++) {
             /** TODO **/
         }
 
@@ -23,6 +23,7 @@ struct objects_t *new_objects(const int argc, char **argv, bool utility) {
             /** TODO **/
         }
     }
+
     return set;
 }
 

@@ -8,7 +8,7 @@ void free_states_array(struct states_array_t *states) {
 struct states_array_t *new_states_array(const int num_objects, const int Vmax) {
     struct states_array_t *NS;
 
-    NS = ...;
+    NS = (struct states_array_t *) calloc(1, sizeof(struct states_array_t));
     assert(NS != NULL);
 
     /** TODO */
@@ -20,7 +20,7 @@ struct states_array_t *new_states_array(const int num_objects, const int Vmax) {
 void push_object_in_array(struct states_array_t *states, const struct objects_t *objects, int i) {
     /* Faites attention que les objets dans LO sont rangés à partir de 0
      * tandis qu'ils sont rangés à partue de 1 dans OPT (et CHM) */
-    for (int bag = 0; bag < (states->Vmax + 1); bag += 1) {
+    for (int bag = 0; bag < (states->VMax + 1); bag += 1) {
         // Parcourir chaque état du sac-à-dos
         int pred;
         int curr;
