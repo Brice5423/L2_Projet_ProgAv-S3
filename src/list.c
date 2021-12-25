@@ -18,7 +18,12 @@ struct list_t *new_list() {
 }
 
 struct list_t *listcpy(const struct list_t *L) {
+    struct list_t *copieL;
 
+    copieL = (struct list_t *) calloc(1, sizeof(struct list_t));
+    *copieL = *L;
+
+    return copieL;
 }
 
 void del_list(struct list_t *L, void (*ptrF)()) {
