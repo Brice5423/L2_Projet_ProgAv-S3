@@ -18,10 +18,32 @@ struct list_t *new_list() {
 }
 
 struct list_t *listcpy(const struct list_t *L) {
+    struct elmlist_t *elmL;
     struct list_t *copieL;
+    int nbElm;
+    int i;
 
     copieL = (struct list_t *) calloc(1, sizeof(struct list_t));
-    *copieL = *L;
+
+    nbElm = get_numelm(L);
+    elmL = L->head;
+
+    for (i = 1; i <= nbElm; i++) {
+        struct elmlist_t *copieElmL;
+
+        copieElmL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
+
+        copieElmL->data = elmL->data;
+        // doit remplir pour le "suc" et le "pred" de la copie
+
+        if (i == 1) {
+            copieL->head = copieElmL;
+        } else if (i == nbElm) {
+            copieL->tail = copieElmL;
+        }
+
+        elmL = elmL->suc;
+    }
 
     return copieL;
 }

@@ -9,7 +9,7 @@ struct retained_t *new_bag() {
 
     bagpack = (struct retained_t *) calloc(1, sizeof(struct retained_t));
 
-    bagpack->objects_list = ...;
+    bagpack->objects_list = (struct list_t *) calloc(1, sizeof(struct list_t));
     assert(bagpack->objects_list);
 
     return bagpack;
