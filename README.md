@@ -50,10 +50,10 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 ![image non charger : image/Plan_avancement_des_fonction.drawio.png](image/Plan_avancement_des_fonction.drawio.png)
 > Sur l'image, il y a la légende de la signification de chaque couleur.  
 > Voici Les rôles de chaque ligne :
-- **1er ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
-- **2ème ligne** : Les fonctions en cours _("En cours")_.
-- **3ème ligne** : Les fonctions terminer. Indiqué si la fonction est finie est non-test _("Fini, à vérifier")_, si terminer est fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il a était donner au début _("Donner")_.
-- **4ème ligne** : Les fonctions qui étaient complete ou faite entièrement, mais qu'ils ne sont pas fonctionnel _("Erreur")_.
+> - **1er ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
+> - **2ème ligne** : Les fonctions en cours _("En cours")_.
+> - **3ème ligne** : Les fonctions terminer. Indiqué si la fonction est finie est non-test _("Fini, à vérifier")_, si terminer est fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il a était donner au début _("Donner")_.
+> - **4ème ligne** : Les fonctions qui étaient complete ou faite entièrement, mais qu'ils ne sont pas fonctionnel _("Erreur")_.
 
 
 ## Fonctionnement
