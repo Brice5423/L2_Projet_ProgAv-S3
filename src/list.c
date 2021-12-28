@@ -1,7 +1,3 @@
-//
-// Created by brice on 21/12/2021.
-//
-
 #include "../include/list.h"
 
 struct list_t *new_list() {
@@ -18,31 +14,23 @@ struct list_t *new_list() {
 }
 
 struct list_t *listcpy(const struct list_t *L) {
-    struct elmlist_t *elmL;
+    struct elmlist_t *unElmDeL;
     struct list_t *copieL;
     int nbElm;
     int i;
 
     copieL = (struct list_t *) calloc(1, sizeof(struct list_t));
+    unElmDeL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
 
     nbElm = get_numelm(L);
-    elmL = L->head;
+    unElmDeL = get_head(L);
 
     for (i = 1; i <= nbElm; i++) {
-        struct elmlist_t *copieElmL;
+        queue(copieL, unElmDeL->data);
 
-        copieElmL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
-
-        copieElmL->data = elmL->data;
-        // doit remplir pour le "suc" et le "pred" de la copie
-
-        if (i == 1) {
-            copieL->head = copieElmL;
-        } else if (i == nbElm) {
-            copieL->tail = copieElmL;
+        if (i != nbElm) { // pas besoin de prendre l'élément suivant, il n'y en a pas
+            unElmDeL = unElmDeL->suc;
         }
-
-        elmL = elmL->suc;
     }
 
     return copieL;
@@ -96,6 +84,21 @@ void cons(struct list_t *L, void *data) {
     E->suc = L->head;
     L->numElm++;
     L->head = E;
+}
+
+void cons(struct list_t * L, void * data){
+    struct elmlist_t *E = (struct elmlist_t *)calloc(1, sizeof(struct elmlist_t));
+
+    E->data = data; // ok mais il y a une fonction qui le fait déjà
+    E->suc = L->head; // ok
+    L->head = E; // ok
+    L->numelm += 1; // ok
+
+    // le porblème vient de là
+    if (L->numelm == 1)
+    {
+        L->tail = E;
+    }
 }
 
 void queue(struct list_t *L, void *data) {

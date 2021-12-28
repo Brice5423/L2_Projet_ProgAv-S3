@@ -1,7 +1,3 @@
-//
-// Created by brice on 21/12/2021.
-//
-
 #include "../include/dp_array.h"
 
 void dp_array(const int VMax, const struct objects_t *objects) {

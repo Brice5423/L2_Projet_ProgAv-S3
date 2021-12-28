@@ -1,7 +1,3 @@
-//
-// Created by brice on 21/12/2021.
-//
-
 #include "../include/bag.h"
 
 struct retained_t *new_bag() {

@@ -1,7 +1,3 @@
-//
-// Created by brice on 21/12/2021.
-//
-
 #include "../include/elmlist.h"
 
 struct elmlist_t *new_elmlist(void *data) {
