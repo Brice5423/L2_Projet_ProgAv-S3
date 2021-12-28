@@ -27,13 +27,13 @@ void free_bag(struct retained_t *bagpack) {
 }
 
 void clean_bag(struct retained_t *bagpack) {
-    /* ***** ***** Basé sur le TP4 ***** ***** */
+    /* ***** ***** ***** Basé sur le TP4 ***** ***** ***** */
     assert(bagpack);
     del_list(&bagpack->objects_list, &rmInteger);
     bagpack->utilities_sum = 0;
 
 
-    /* ***** ***** Fait par moi même ***** ***** */
+    /* ***** ***** ***** Fait par moi même ***** ***** ***** */
     /*struct list_t *objectsList;
     struct elmlist_t *unElmBagpack;
     struct elmlist_t *unElmBagpack2;
@@ -67,7 +67,8 @@ void clean_bag(struct retained_t *bagpack) {
 }
 
 void push_object_in_bag(struct retained_t *bagpack, struct object_t *object) {
-    /** TODO */
+    queue(bagpack->objects_list, object);
+    bagpack->utilities_sum += object->utility;
 }
 
 void view_bagpack(struct retained_t *bagpack, const char *title) {

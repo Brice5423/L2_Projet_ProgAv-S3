@@ -86,21 +86,6 @@ void cons(struct list_t *L, void *data) {
     L->head = E;
 }
 
-void cons(struct list_t * L, void * data){
-    struct elmlist_t *E = (struct elmlist_t *)calloc(1, sizeof(struct elmlist_t));
-
-    E->data = data; // ok mais il y a une fonction qui le fait déjà
-    E->suc = L->head; // ok
-    L->head = E; // ok
-    L->numelm += 1; // ok
-
-    // le porblème vient de là
-    if (L->numelm == 1)
-    {
-        L->tail = E;
-    }
-}
-
 void queue(struct list_t *L, void *data) {
     struct elmlist_t *E;
 

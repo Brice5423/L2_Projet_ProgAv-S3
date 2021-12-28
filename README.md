@@ -40,14 +40,14 @@ Fonction :
 ## Agencement des includes dans les fichiers `.h`
 
 Voici l'agencement des différents `#include` dans les `.h` ce trouvent dans le projet :  
-![image non charger : image/Plan_des_.h.drawio.png](image/Plan_des_.h.drawio.png)  
+![image non charger : Plan_des_.h.drawio.png](image/Plan_des_.h.drawio.png)  
 > Les trois derniers blocs en rose _(dp_rec.h, dp_array.h et dp_list.h)_ sont les trois `#include` à faire appel dans le `main.c` pour qu'il puisse fonctionner.
 
 
 ## Agencement & avancement des fonctions
 
 Voici les fonctions que nous avons réussies à faire durant le projet :  
-![image non charger : image/Plan_avancement_des_fonction.drawio.png](image/Plan_avancement_des_fonction.drawio.png)
+![image non charger : Plan_avancement_des_fonction.drawio.png](image/Plan_avancement_des_fonction.drawio.png)
 > Sur l'image, il y a la légende de la signification de chaque couleur.  
 > Voici Les rôles de chaque ligne :
 > - **1er ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
