@@ -31,7 +31,7 @@ void clean_bag(struct retained_t *bagpack);
 
 /** @brief Range un nouvel objet dans le sac-à-dos.
  * (Voir sujet, diapo 16 à 18) */
-void push_object_in_bag(struct retained_t *bagpack, struct object_t *ptr_object);
+void push_object_in_bag(struct retained_t *bagpack, struct object_t *object);
 
 /** @brief Visualise les objets rangés dans un sac-à-dos.
  * (Voir sujet, diapo 16 à 18) */

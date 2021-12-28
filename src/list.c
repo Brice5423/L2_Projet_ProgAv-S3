@@ -20,7 +20,7 @@ struct list_t *listcpy(const struct list_t *L) {
     int i;
 
     copieL = (struct list_t *) calloc(1, sizeof(struct list_t));
-    unElmDeL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
+    //unElmDeL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
 
     nbElm = get_numelm(L);
     unElmDeL = get_head(L);

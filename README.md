@@ -26,6 +26,7 @@ ________________________
 - `ptrf` & `cmp_ptrf` & `ptr_fct` => `ptrF`
 - `Vmax` -> `VMax`
 - `nonstop` -> `nonStop`
+- `ptr_object` -> `object`
 
 ## Agencement des includes dans les fichiers `.h`
 

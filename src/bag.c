@@ -17,15 +17,44 @@ void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack) {
 }
 
 void free_bag(struct retained_t *bagpack) {
-    /** TODO **/
+    /** TODO */
 }
 
 void clean_bag(struct retained_t *bagpack) {
-    /** TODO **/
+    struct list_t *objectsList;
+    struct elmlist_t *unElmBagpack;
+    struct elmlist_t *unElmBagpack2;
+    int nbElm;
+    int i;
+
+    //unElmBagpack = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
+    //unElmBagpack2 = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
+
+    objectsList = bagpack->objects_list;
+    nbElm = objectsList->numElm;
+    unElmBagpack = objectsList->head;
+
+    for (i = 1; i <= nbElm; i++) {
+        if (i != nbElm) {
+            unElmBagpack2 = unElmBagpack->suc;
+        }
+
+        free(unElmBagpack);
+        unElmBagpack = NULL;
+
+        if (i != nbElm) {
+            unElmBagpack = unElmBagpack2;
+        }
+    }
+
+    objectsList->head = NULL;
+    objectsList->tail = NULL;
+    objectsList->numElm = 0;
+    bagpack->utilities_sum = 0;
 }
 
-void push_object_in_bag(struct retained_t *bagpack, struct object_t *ptr_object) {
-    /** TODO **/
+void push_object_in_bag(struct retained_t *bagpack, struct object_t *object) {
+    /** TODO */
 }
 
 void view_bagpack(struct retained_t *bagpack, const char *title) {
