@@ -7,27 +7,27 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
     struct retained_t *best_bagpack;
 
     duplicata = (struct retained_t *) calloc(1, sizeof(struct retained_t));
-    bagcpy(duplicata, bagpack);
+    bagcpy(duplicata, bagpack); // Moi : duplicata, bagpack
 
     best_bagpack = (struct retained_t *) calloc(1, sizeof(struct retained_t));
-    bagcpy(...); // Pred: best bag is bag
+    bagcpy(...); // Pred: best bag is bag // Moi : ...
 
-    for (int obj_idx = object_set->first_idx ...) { // Verif: Try new objects
+    for (int obj_idx = object_set->first_idx ...) { // Verif: Try new objects // Moi : ...
         struct object_t *ptr_object;
         int curr_volume;
 
         ptr_object = (struct object_t *) calloc(1, sizeof(struct object_t));
-        curr_volume = ...;
+        curr_volume = ...; // Moi : ...
 
-        if (...) {
-            bagcpy(...);
-            push_object_in_bag(...);
-            object_set->first_idx = ...;
-            prec(...); // avant "prec" c'était "p_rec"
+        if (...) { // Moi : ...
+            bagcpy(...); // Moi : ...
+            push_object_in_bag(...); // Moi : ...
+            object_set->first_idx = ...; // Moi : ...
+            prec(...); // Moi : ...
 
-            if (...) {
-                clean_bag(...);
-                bagcpy(...);
+            if (...) { // Moi : ...
+                clean_bag(...); // Moi : ...
+                bagcpy(...); // Moi : ...
             }
         }
     }
