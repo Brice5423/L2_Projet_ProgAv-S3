@@ -8,10 +8,10 @@
 #include "outils.h"
 
 /**
-Abstract type modeling a list element containing
-- a form
-- 2 pointers to its predecessor  and successor
-*/
+ * Abstract type modeling a list element containing
+ * - a form
+ * - 2 pointers to its predecessor  and successor
+ */
 struct elmlist_t {
     void *data;
     struct elmlist_t *suc;
