@@ -23,7 +23,7 @@ struct list_t *new_list();
 struct list_t *listcpy(const struct list_t *L);
 
 /** Delete list its elements and possibly the data they hold */
-void del_list(struct list_t *L, void (*ptrF)());
+void del_list(struct list_t **L, void (*ptrF)());
 
 /** Is list L empty ? */
 bool is_empty(const struct list_t *L);

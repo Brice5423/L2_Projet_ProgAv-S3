@@ -27,10 +27,10 @@ int main(int argc, char **argv) {
     const bool utility = (atoi(argv[2]) == 0) ? false : true;
     const int VMax = atoi(argv[3]);
 
-    struct retained_t *retained_objects;
+    //struct retained_t *retained_objects; // variable non utilisé
     struct objects_t *object_set;
 
-    retained_objects = new_bag();
+    //retained_objects = new_bag(); // variable non utilisé
     object_set = new_objects(argc, argv, utility);
 
     #ifdef _TRACE_

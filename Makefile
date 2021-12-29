@@ -15,14 +15,14 @@ CFLAGS = -g -Wall -std=c99 -I$(IDIR)
 LFLAGS = -lm
 
 # le programme final
-_PROG = executable_projet
+_PROG = exe_projet
 # On ajoute include/ à _PROG |==> include/pt_sgt
 PROG = $(patsubst %,$(BDIR)/%,$(_PROG))
 
-_DEP = bag.h dp_array.h dp_list.h dp_rec.h elmlist.h global.h list.h objects.h space_array.h states.h
+_DEP = bag.h dp_rec.h elmlist.h global.h list.h objects.h # dp_array.h dp_list.h space_array.h states.h
 DEP = $(patsubst %,$(IDIR)/%,$(_DEP))
 
-_OBJ = main.o bag.o dp_array.o dp_list.o dp_rec.o elmlist.o global.o list.o objects.o space_array.o states.o
+_OBJ = main.o bag.o dp_rec.o elmlist.o global.o list.o objects.o # dp_array.o dp_list.o space_array.o states.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 # Toutes les étiquettes qui ne sont pas des fichiers sont déclarées ici

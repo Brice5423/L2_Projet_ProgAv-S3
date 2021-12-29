@@ -20,7 +20,7 @@ void free_bag(struct retained_t *bagpack) {
     clean_bag(bagpack);
 
     free(bagpack->objects_list);
-    bagpack->objects_list == NULL;
+    bagpack->objects_list = NULL;
 
     free(bagpack);
     bagpack = NULL;
@@ -29,7 +29,7 @@ void free_bag(struct retained_t *bagpack) {
 void clean_bag(struct retained_t *bagpack) {
     /* ***** ***** ***** Basé sur le TP4 ***** ***** ***** */
     assert(bagpack);
-    del_list(&bagpack->objects_list, &rmInteger);
+    del_list(&(bagpack->objects_list), &rmInteger);
     bagpack->utilities_sum = 0;
 
 
