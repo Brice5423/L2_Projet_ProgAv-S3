@@ -13,7 +13,7 @@ struct object_t {
 };
 
 /** @brief (Voir sujet, diapo 11 à 13)
- * @struct struct object_t *objects : pointeur d'un objet ???
+ * @struct struct object_t *objects : pointeur d'un tableau d'objet, chois de l'objet par adresse
  * @struct int nb_objects : nombre d'objet dans le sac
  * @struct int first_idx : indice à traiter en premier
  */
