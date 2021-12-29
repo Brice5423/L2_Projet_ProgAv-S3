@@ -45,8 +45,10 @@ int main(int argc, char **argv) {
         my_bag = new_bag();
         prec(VMax, object_set, my_bag);
         view_bagpack(my_bag, "Final selection");
+
     } else if (mode == 'A') {
         dp_array(VMax, object_set);
+
     } else {
         dp_list(VMax, object_set);
     }
