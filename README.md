@@ -9,10 +9,10 @@ ________________________
 
 ## Renommage
 
-> Certaine partie du code son pas forcément facile à comprendre ou à lire.  
-> Nous sommet permit de renommer certain fichier, fonction, structure et variable. Cela à pour but de **travaillé** dans les **meilleurs condition possible**.  
-> Nous évitons de donnée des nouveaux noms qui poserai problème à la lecture de notre très cher professeur.  
-> Dans la majorité des cas, nous allons respecter la **norme de nomination** en **C** qui est le **camelCase**.
+> Certaine partie du code ne sont pas forcément facile à comprendre ou à lire.  
+> Nous nous sommes permit de renommer certains fichiers, fonctions, structures et variables. Cela pour travailler dans les meilleurs conditions possible.
+> Nous évitons de donner de nouveaux noms qui poseraient problèmes à la lecture de notre professeur.  
+> Dans la majorité des cas, nous allons respecter la **norme de nomination** en C, le **camelCase**.
 
 ### Fichier changer
 
@@ -32,7 +32,7 @@ ________________________
 ## Création de nouveau fichier 
 
 ### `outils.c` & `outils.h`
-Nous avons créé ces deux fichiers pour mettre à notre disposition des outils nécessaire pour réussir à faire le projet.  
+Nous avons créé ces deux fichiers pour mettre à notre disposition les outils nécessaire pour réussir le projet.  
 Fonction :
 - `void rmInteger(int *i)`
 
