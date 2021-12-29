@@ -7,7 +7,7 @@ struct objects_t *new_objects(const int argc, char **argv, bool utility) {
 
     set = (struct objects_t *) calloc(1, sizeof(struct objects_t));
 
-    offset = 4; // Pourquoi "4" ? 4 Parce que ce sera a partir du 4ème arguments que les objets sont declaré (./backpack mode utilité(1/0) volume1 utilité1 volume2 utilité2 par exemple )
+    offset = 4; // 4 Parce que ce sera à partir du 4ème argument que les objets sont declarer (./backpack mode utilité(1/0) volume1 utilité1 volume2 utilité2 par exemple )
     set->nb_objects = (utility) ? (argc - offset) / 2 : (argc - offset);
 
     // Voir si c'est bien "set->nb_objects" et non "1" pour le nombre d'objets
@@ -22,9 +22,9 @@ struct objects_t *new_objects(const int argc, char **argv, bool utility) {
         }
 
     } else {
-        for (i = offset; i < argc; i += 1) {
-            set->objects[i - 4].volume = atoi(argv[i]);
-            set->objects[i - 4].utility = atoi(argv[i]);
+        for (i = offset; i < argc; i++) {
+            set->objects[i - offset].volume = atoi(argv[i]);
+            set->objects[i - offset].utility = atoi(argv[i]);
         }
     }
 
