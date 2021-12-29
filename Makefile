@@ -19,10 +19,10 @@ _PROG = exe_projet
 # On ajoute include/ à _PROG |==> include/pt_sgt
 PROG = $(patsubst %,$(BDIR)/%,$(_PROG))
 
-_DEP = bag.h dp_rec.h elmlist.h global.h list.h objects.h # dp_array.h dp_list.h space_array.h states.h
+_DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
 DEP = $(patsubst %,$(IDIR)/%,$(_DEP))
 
-_OBJ = main.o bag.o dp_rec.o elmlist.o global.o list.o objects.o # dp_array.o dp_list.o space_array.o states.o
+_OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o space_array.o dp_array.o states.o dp_list.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 # Toutes les étiquettes qui ne sont pas des fichiers sont déclarées ici

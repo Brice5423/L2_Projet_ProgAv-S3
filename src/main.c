@@ -1,6 +1,6 @@
 #include "../include/dp_rec.h"
-#include "../include/dp_array.h"
-#include "../include/dp_list.h"
+//#include "../include/dp_array.h"
+//#include "../include/dp_list.h"
 
 int main(int argc, char **argv) {
     /* ***** ***** main1 ***** ***** */
@@ -16,8 +16,8 @@ int main(int argc, char **argv) {
         fprintf(stderr, "\t\t- L for list approach\n");
         fprintf(stderr, "\t* Utilité prend 1 pour des objets avec utilités, 0 sinon\n");
         fprintf(stderr, "\t* Vmax is for bag max volume\n");
-        fprintf(stderr, "\t* vol_i is for #i object's volume, i in {1, ... , n}");
-        fprintf(stderr, "\t* use_i is for #i object's utility, i in {1, ... , n}");
+        fprintf(stderr, "\t* vol_i is for #i object's volume, i in {1, ... , n}\n");
+        fprintf(stderr, "\t* use_i is for #i object's utility, i in {1, ... , n}\n");
         exit(-1);
     }
 
@@ -46,12 +46,12 @@ int main(int argc, char **argv) {
         prec(VMax, object_set, my_bag);
         view_bagpack(my_bag, "Final selection");
 
-    } else if (mode == 'A') {
+    } /*else if (mode == 'A') {
         dp_array(VMax, object_set);
 
     } else {
         dp_list(VMax, object_set);
-    }
+    }*/
 
     return EXIT_SUCCESS;
 }
