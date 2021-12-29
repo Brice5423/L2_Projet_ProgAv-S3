@@ -2,8 +2,6 @@
 #include "../include/dp_array.h"
 #include "../include/dp_list.h"
 
-// cc Antoine (test)
-
 int main(int argc, char **argv) {
     /* ***** ***** main1 ***** ***** */
 
