@@ -52,7 +52,7 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 > Voici Les rôles de chaque ligne :
 > - **1ᵉ ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
 > - **2ᵉ ligne** : Les fonctions en cours _("En cours")_.
-> - **3ᵉ ligne** : Les fonctions terminer. Indiqué si la fonction est finie est non-test _("Fini, à vérifier")_, si terminer est fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il a était donner au début _("Donner")_.
+> - **3ᵉ ligne** : Les fonctions terminées. Indiqué si la fonction est finie est non-test _("Fini, à vérifier")_, si terminé est fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il a était donner au début _("Donner")_.
 > - **4ᵉ ligne** : Les fonctions qui étaient complete ou faite entièrement, mais qu'ils ne sont pas fonctionnel _("Erreur")_.
 
 
