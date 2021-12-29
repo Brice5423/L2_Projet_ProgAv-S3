@@ -1,0 +1,4 @@
+C:\Users\brice\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" D:\W_Programmation\Licence_Info\S3\Prog_Avance\Projet_ProgAv-S3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/W_Programmation/Licence_Info/S3/Prog_Avance/Projet_ProgAv-S3/cmake-build-debug
