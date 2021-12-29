@@ -21,41 +21,42 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
     int bag;
 
     /* Faites attention que les objets dans LO sont rangés à partir de 0
-     * tandis qu'ils sont rangés à parte de 1 dans OPT (et CHM) */
+     * tandis qu'ils sont rangés à partir de 1 dans OPT (et CHM) */
     for (bag = 0; bag < (states->VMax + 1); bag++) {
         // Parcourir chaque état du sac-à-dos
         int pred;
         int curr;
         int OPT1;
 
-        pred = ...; // Calculer l'index de l'état pour l'objet (i-1)
-        curr = ...; // Calculer l'index de l'état pour l'objet (i)
+        pred = objects->first_idx +
+               (i - 1); // Calculer l'index de l'état pour l'objet (i-1) // Moi : objects->first_idx + (i - 1)
+        curr = objects->first_idx + i; // Calculer l'index de l'état pour l'objet (i) // Moi : objects->first_idx + i
         OPT1 = states->OPT[pred];
 
         states->CHM[curr] = INFTY; //hyp.: l'objet i n'est pas dans le sac
 
-        if (...) { // S'il y a de la place dans le sac
+        if (...) { // S'il y a de la place dans le sac // Moi : ...
             int pred_without_i;
             int OPT2;
 
-            pred_without_i = ...; // L'index du bag SANS l'objet (i)
-            OPT2 = ...;
+            pred_without_i = ...; // L'index du bag SANS l'objet (i) // Moi : ...
+            OPT2 = ...; // Moi : ...
 
-            if (...) { // Sélectionne la meilleur configuration
-                states->OPT[curr] = ...;
-                states->CHM[curr] = ...; // Noter que l'objet i est dans le sac
+            if (...) { // Sélectionne la meilleur configuration // Moi : ...
+                states->OPT[curr] = ...; // Moi : ...
+                states->CHM[curr] = ...; // Noter que l'objet i est dans le sac // Moi : ...
             } else {
-                states->OPT[curr] = ...;
+                states->OPT[curr] = ...; // Moi : ...
             }
+
         } else {
-            states->OPT[curr] = ...; // S'il n'y a pas de place
+            states->OPT[curr] = ...; // S'il n'y a pas de place // Moi : ...
         }
     }
 }
 
 /**
  * Private Function
- * Connais pas le but de cette fonction
  */
 void init_opt_chm(struct states_array_t *states) {
     int obj;
