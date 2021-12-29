@@ -21,7 +21,7 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
     int bag;
 
     /* Faites attention que les objets dans LO sont rangés à partir de 0
-     * tandis qu'ils sont rangés à partue de 1 dans OPT (et CHM) */
+     * tandis qu'ils sont rangés à parte de 1 dans OPT (et CHM) */
     for (bag = 0; bag < (states->VMax + 1); bag++) {
         // Parcourir chaque état du sac-à-dos
         int pred;
@@ -148,29 +148,27 @@ void view_chm(const struct states_array_t *states) {
     int idx;
 
     printf("CHM |\t");
-    for(bag = 0; bag < (states->VMax + 1); bag++) {
+    for (bag = 0; bag < (states->VMax + 1); bag++) {
         printf("%2d\t", bag);
     }
 
     printf("\n----|");
-    for(bag = 0; bag < (states->VMax + 1); bag++) {
+    for (bag = 0; bag < (states->VMax + 1); bag++) {
         printf("--------");
     }
 
     printf("\n");
-    for(obj = 0; obj < (states->num_obj + 1); obj++) {
+    for (obj = 0; obj < (states->num_obj + 1); obj++) {
         printf("%3d |\t", obj);
 
-        for(bag = 0; bag < (states->VMax + 1); bag++) {
+        for (bag = 0; bag < (states->VMax + 1); bag++) {
             idx = obj * (states->VMax + 1) + bag;
 
-            if(states->CHM[idx] == INFTY) {
+            if (states->CHM[idx] == INFTY) {
                 printf("PRE\t");
-            }
-            else if(states->CHM[idx] == UNDTR) {
+            } else if (states->CHM[idx] == UNDTR) {
                 printf("UND\t");
-            }
-            else {
+            } else {
                 printf("%2d\t", states->CHM[idx]);
             }
         }

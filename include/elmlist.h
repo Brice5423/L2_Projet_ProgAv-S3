@@ -5,7 +5,10 @@
 #ifndef PROJET_PROGAV_S3_ELMLIST_H
 #define PROJET_PROGAV_S3_ELMLIST_H
 
-#include "outils.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <assert.h>
 
 /**
  * Abstract type modeling a list element containing

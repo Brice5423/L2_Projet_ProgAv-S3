@@ -1,12 +1,7 @@
 #ifndef PROJET_PROGAV_S3_OBJECTS_H
 #define PROJET_PROGAV_S3_OBJECTS_H
 
-#include "global.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <assert.h>
+#include "outils.h"
 
 /** @brief (Voir sujet, diapo 11 à 13)
  * @struct int volume : volume de l'objet

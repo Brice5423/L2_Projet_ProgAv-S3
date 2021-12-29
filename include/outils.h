@@ -5,6 +5,8 @@
 #ifndef PROJET_PROGAV_S3_OUTILS_H
 #define PROJET_PROGAV_S3_OUTILS_H
 
+# include "global.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
