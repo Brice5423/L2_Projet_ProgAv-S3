@@ -58,3 +58,8 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 
 ## Fonctionnement
 
+### Dans le makefile
+
+
+### À l'exécution 
+
