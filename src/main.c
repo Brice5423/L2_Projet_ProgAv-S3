@@ -53,5 +53,8 @@ int main(int argc, char **argv) {
         dp_list(VMax, object_set);
     }*/
 
+    //free_bag(&retained_objects);
+    free(object_set);
+
     return EXIT_SUCCESS;
 }
