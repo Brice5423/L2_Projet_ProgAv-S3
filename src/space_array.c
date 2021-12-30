@@ -14,7 +14,7 @@ struct states_array_t *new_states_array(const int num_objects, const int Vmax) {
     assert(NS != NULL);
     /*Nous (à verifier) */
     NS->num_obj = num_objects;
-    NS->Vmax = Vmax;
+    NS->VMax = Vmax;
 
     init_opt_chm(NS);
     return NS;
@@ -32,28 +32,28 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
         int OPT1;
 
         pred = objects->first_idx +
-               (i - 1); // Calculer l'index de l'état pour l'objet (i-1) // Moi : objects->first_idx + (i - 1) //ou : (i - 1) * (states->Vmax + 1) + bag;
-        curr = objects->first_idx + i; // Calculer l'index de l'état pour l'objet (i) // Moi : objects->first_idx + i //ou : i * (states->Vmax + 1) + bag;
+               (i - 1); // Calculer l'index de l'état pour l'objet (i-1) // Nous : objects->first_idx + (i - 1)
+        curr = objects->first_idx + i; // Calculer l'index de l'état pour l'objet (i) // Nous : objects->first_idx + i
         OPT1 = states->OPT[pred];
 
         states->CHM[curr] = INFTY; //hyp.: l'objet i n'est pas dans le sac
 
-        if (objects->objects[curr].volume <= bag) { // S'il y a de la place dans le sac // Moi : objects->objects[curr].volume <= bag
+        if (objects->objects[curr].volume <= bag) { // S'il y a de la place dans le sac // Nous : objects->objects[curr].volume <= bag
             int pred_without_i;
             int OPT2;
 
-            pred_without_i = (states->Vmax + 1 - objects->objects[curr].volume) + bag; // L'index du bag SANS l'objet (i) // Moi : (states->Vmax + 1 - objects->objects[curr].volume) + bag;
-            OPT2 = states->OPT[pred_without_i]; // Moi : states->OPT[pred_without_i];
+            pred_without_i = (states->VMax + 1 - objects->objects[curr].volume) + bag; // L'index du bag SANS l'objet (i) // Nous : (states->VMax + 1 - objects->objects[curr].volume) + bag;
+            OPT2 = states->OPT[pred_without_i]; // Nous : states->OPT[pred_without_i];
 
-            if (OPT1 <= OPT2) { // Sélectionne la meilleur configuration // Moi : ...
-                states->OPT[curr] = OPT2; // Moi : OPT2;
-                states->CHM[curr] = states->OPT[pred_without_i]; // Noter que l'objet i est dans le sac // Moi : states->OPT[pred_without_i];
+            if (OPT1 <= OPT2) { // Sélectionne la meilleur configuration // Nous : OPT1 <= OPT2
+                states->OPT[curr] = OPT2; // Nous : OPT2;
+                states->CHM[curr] = states->OPT[pred_without_i]; // Noter que l'objet i est dans le sac // Nous : states->OPT[pred_without_i];
             } else {
-                states->OPT[curr] = OPT1; // Moi : OPT1;
+                states->OPT[curr] = OPT1; // Nous : OPT1;
             }
 
         } else {
-            states->OPT[curr] = OPT1; // S'il n'y a pas de place // Moi : OPT1;
+            states->OPT[curr] = OPT1; // S'il n'y a pas de place // Nous : OPT1;
         }
     }
 }
