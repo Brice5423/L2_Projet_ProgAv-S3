@@ -59,7 +59,7 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 ## Fonctionnement
 
 ### Dans le makefile
-Dans la première étape pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
+Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
 #### L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
 ```c
@@ -79,7 +79,7 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o spac
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
 ### À l'exécution
-La deuxième étape pour pouvoir exécuter le projet. Il faut lancer cette commande ci-dessous dans un terminal **Linux**.
+La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette commande **ci-dessous** dans un terminal **Linux**.
 ```shell
 ./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 par exemple
 ```
