@@ -27,6 +27,7 @@ ________________________
 - `Vmax` -> `VMax`
 - `nonstop` -> `nonStop`
 - `ptr_object` -> `object`
+- `obj_idx` -> `object_idx`
 
 
 ## 2. Création de nouveau fichier 
