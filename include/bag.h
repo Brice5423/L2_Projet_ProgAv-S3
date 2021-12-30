@@ -23,7 +23,7 @@ void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack);
 
 /** @brief Libère la mémoire occupée par un sac-à-dos.
  * (Voir sujet, diapo 16 à 18) */
-void free_bag(struct retained_t *bagpack);
+void free_bag(struct retained_t **bagpack);
 
 /** @brief Vide le sac-à-dos, sans détruire la variable le modélisant.
  * (Voir sujet, diapo 16 à 18) */
