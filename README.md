@@ -14,11 +14,11 @@ ________________________
 > Nous évitons de donner de nouveaux noms qui poseraient problèmes à la lecture de notre professeur.  
 > Dans la majorité des cas, nous allons respecter la **norme de nomination** en C, le **camelCase**.
 
-### 1.1 Fichier changer
+### 1.1 Fichier changé
 
 - Le fichier `prec.h` est renommé en `db_rec.h`. `db_rec.c` et `db_rec.h` les mêmes noms pour la même chose.
 
-### 1.2. Variables changer
+### 1.2. Variables changées
 
 - `newbagpack` -> `newBagpack`
 - `ptrf` -> `ptrF`
@@ -53,8 +53,8 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 > Voici Les rôles de chaque ligne :
 > - **1ᵉ ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
 > - **2ᵉ ligne** : Les fonctions en cours _("En cours")_.
-> - **3ᵉ ligne** : Les fonctions terminées. Indiqué si la fonction est finie est non-test _("Fini, à vérifier")_, si terminé est fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il a était donner au début _("Donner")_.
-> - **4ᵉ ligne** : Les fonctions qui étaient complete ou faite entièrement, mais qu'ils ne sont pas fonctionnel _("Erreur")_.
+> - **3ᵉ ligne** : Les fonctions terminées. Indique si la fonction est finie et non-test _("Fini, à vérifier")_, si terminé et fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il était donné au début du TP _("Donner")_.
+> - **4ᵉ ligne** : Les fonctions qui sont complete ou faite entièrement, mais qui ne sont pas fonctionnel _("Erreur")_.
 
 
 ## 5. Fonctionnement
@@ -72,7 +72,7 @@ Nous avons fait appel à tous les `.h`.
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
-#### 5.1.3. Défini tout les `.o`
+#### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o`
 ```c
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o space_array.o dp_array.o states.o dp_list.o
@@ -84,7 +84,7 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 ```shell
 ./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 ... volumeN utilitéN
 ```
-> Dans la commande il y a des options à bien comprendre comment remplir :
+> Voici les différentes options a rentrées et leur utilité :
 > - **mode** _(R|A|L)_ : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
 > - **utilité** _(0|1)_ : Défini si on défini le volume _(1)_ ou pas _(0)_. S'il n'est pas défini alors l'utilité prendra le volume comme valeur.
 > - **VMax** : Défini le volume maximal que le sac peut avoir.
