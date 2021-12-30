@@ -60,6 +60,25 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 
 ### Dans le makefile
 
+#### L'exécutable
+Le nom de l'exécutable du projet est `exe_projet`.
+```c
+_PROG = exe_projet
+```
+
+#### Défini tous les `.h`
+Nous avons fait appel à tous les `.h`.
+```c
+_DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
+```
+> On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
+
+#### Défini tout les `.o`
+Nous avons défini tous les `.o`
+```c
+_OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o space_array.o dp_array.o states.o dp_list.o
+```
+> Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
 ### À l'exécution 
 
