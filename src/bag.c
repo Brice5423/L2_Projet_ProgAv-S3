@@ -16,7 +16,7 @@ void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack) {
     newBagpack->utilities_sum = bagpack->utilities_sum;
 }
 
-void free_bag(struct retained_t *bagpack) {
+void free_bag(struct retained_t **bagpack) {
     clean_bag(bagpack);
 
     free(bagpack->objects_list);
