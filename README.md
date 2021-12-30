@@ -59,20 +59,18 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 ## Fonctionnement
 
 ### Dans le makefile
-
+Dans la première étape pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
 #### L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
 ```c
 _PROG = exe_projet
 ```
-
 #### Défini tous les `.h`
 Nous avons fait appel à tous les `.h`.
 ```c
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
-
 #### Défini tout les `.o`
 Nous avons défini tous les `.o`
 ```c
@@ -80,5 +78,14 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o spac
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
-### À l'exécution 
-
+### À l'exécution
+La deuxième étape pour pouvoir exécuter le projet. Il faut lancer cette commande ci-dessous dans un terminal **Linux**.
+```shell
+./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 par exemple
+```
+> Dans la commande il y a des options à bien comprendre comment remplir :
+> - **mode** (R|A|L) : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
+> - **utilité** (0|1) : Défini si on défini le volume _(1)_ ou pas _(0)_. S'il n'est pas défini alors l'utilité prendra le volume comme valeur.
+> - **VMax** : Défini le volume maximal que le sac peut avoir.
+> - **volumeN** : Volume du Nème objet.
+> - **utilitéN** : Utilité du Nème objet.
