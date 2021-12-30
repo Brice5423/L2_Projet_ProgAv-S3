@@ -81,7 +81,7 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o spac
 ### 5.2. À l'exécution
 La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette commande **ci-dessous** dans un terminal **Linux**.
 ```shell
-./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 par exemple
+./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 ... volumeN utilitéN
 ```
 > Dans la commande il y a des options à bien comprendre comment remplir :
 > - **mode** _(R|A|L)_ : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
