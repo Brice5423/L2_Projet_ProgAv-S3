@@ -37,8 +37,8 @@ dirs:
 	@mkdir -p $(ODIR)
 
 # La cible est l'exécutable pt_sgt qui dépent des objets $(OBJ)
-#		$@ désigne la cible $(PROG)
-#		$^ désigne les dépendances $(OBJ)
+#	$@ désigne la cible $(PROG)
+#	$^ désigne les dépendances $(OBJ)
 $(PROG): $(OBJ)
 	$(CC) $(LFLAGS) -o $@ $^
 
@@ -46,15 +46,17 @@ $(PROG): $(OBJ)
 # Les dépendances sont :
 # (+) $(DEP) et
 # (+) le fichier source : $(SDIR)/%.c où
-#				% désigne le nom de la cible sans le suffixe .o
-#			qui se situe dans le répertoire $(ODIR)
+# 	% désigne le nom de la cible sans le suffixe .o
+# 	qui se situe dans le répertoire $(ODIR)
 $(ODIR)/%.o: $(SDIR)/%.c $(DEP)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 # les cibles de nettoyage
 clean :
 	rm -rf $(ODIR)
+	mkdir $(ODIR)
 
 delete : clean
 	rm -rf $(BDIR)
+	mkdir $(BDIR)
 	rm -f $(PROG)

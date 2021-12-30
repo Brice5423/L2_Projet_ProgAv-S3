@@ -35,6 +35,6 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
 
     clean_bag(bagpack);
     bagcpy(bagpack, best_bagpack);
-    free_bag(best_bagpack);
-    free_bag(duplicata);
+    free_bag(&best_bagpack);
+    free_bag(&duplicata);
 }
