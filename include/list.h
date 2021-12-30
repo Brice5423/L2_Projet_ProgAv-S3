@@ -49,7 +49,7 @@ void cons(struct list_t *L, void *data);
 /** Add  a brand new list element holding data to the tail of L */
 void queue(struct list_t *L, void *data);
 
-/** Insert data at place localized by cmp_ptr */
+/** Insert data at place localized by ptrF */
 void insert_ordered(struct list_t *L, void *data, bool (*ptrF)());
 
 /** Display list on stdout stream */

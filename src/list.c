@@ -45,11 +45,13 @@ void del_list(struct list_t **L, void (*ptrF)()) {
         struct elmlist_t *suc;
 
         suc = E->suc;
-        free(E);
+        del_elmlist(E, ptrF); // free(E)
         E = suc;
     }
 
     free(*L);
+    *L = NULL;
+
     free(L);
     L = NULL;
 }
@@ -60,14 +62,17 @@ bool is_empty(const struct list_t *L) {
 }
 
 struct elmlist_t *get_head(const struct list_t *L) {
+    assert(L);
     return L->head;
 }
 
 struct elmlist_t *get_tail(const struct list_t *L) {
+    assert(L);
     return L->tail;
 }
 
 int get_numelm(const struct list_t *L) {
+    assert(L);
     return L->numElm;
 }
 

@@ -22,48 +22,17 @@ void free_bag(struct retained_t **bagpack) {
     free((*bagpack)->objects_list);
     (*bagpack)->objects_list = NULL;
 
+    free(*bagpack);
+    *bagpack = NULL;
+
     free(bagpack);
     bagpack = NULL;
 }
 
 void clean_bag(struct retained_t *bagpack) {
-    /* ***** ***** ***** Basé sur le TP4 ***** ***** ***** */
     assert(bagpack);
     del_list(&(bagpack->objects_list), &rmInteger);
     bagpack->utilities_sum = 0;
-
-
-    /* ***** ***** ***** Fait par moi même ***** ***** ***** */
-    /*struct list_t *objectsList;
-    struct elmlist_t *unElmBagpack;
-    struct elmlist_t *unElmBagpack2;
-    int nbElm;
-    int i;
-
-    //unElmBagpack = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
-    //unElmBagpack2 = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
-
-    objectsList = bagpack->objects_list;
-    nbElm = objectsList->numElm;
-    unElmBagpack = objectsList->head;
-
-    for (i = 1; i <= nbElm; i++) {
-        if (i != nbElm) {
-            unElmBagpack2 = unElmBagpack->suc;
-        }
-
-        free(unElmBagpack);
-        unElmBagpack = NULL;
-
-        if (i != nbElm) {
-            unElmBagpack = unElmBagpack2;
-        }
-    }
-
-    objectsList->head = NULL;
-    objectsList->tail = NULL;
-    objectsList->numElm = 0;
-    bagpack->utilities_sum = 0;*/
 }
 
 void push_object_in_bag(struct retained_t *bagpack, struct object_t *object) {
