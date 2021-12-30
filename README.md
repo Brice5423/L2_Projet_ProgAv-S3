@@ -7,18 +7,18 @@ ________________________
 
 # Projet en lui-même
 
-## Renommage
+## 1. Renommage
 
 > Certaine partie du code ne sont pas forcément facile à comprendre ou à lire.  
 > Nous nous sommes permit de renommer certains fichiers, fonctions, structures et variables. Cela pour travailler dans les meilleurs conditions possible.
 > Nous évitons de donner de nouveaux noms qui poseraient problèmes à la lecture de notre professeur.  
 > Dans la majorité des cas, nous allons respecter la **norme de nomination** en C, le **camelCase**.
 
-### Fichier changer
+### 1.1 Fichier changer
 
 - Le fichier `prec.h` est renommé en `db_rec.h`. `db_rec.c` et `db_rec.h` les mêmes noms pour la même chose.
 
-### Variables changer
+### 1.2. Variables changer
 
 - `newbagpack` -> `newBagpack`
 - `ptrf` -> `ptrF`
@@ -29,22 +29,22 @@ ________________________
 - `ptr_object` -> `object`
 
 
-## Création de nouveau fichier 
+## 2. Création de nouveau fichier 
 
-### `outils.c` & `outils.h`
+### 2.1. `outils.c` & `outils.h`
 Nous avons créé ces deux fichiers pour mettre à notre disposition les outils nécessaire pour réussir le projet.  
 Fonction :
 - `void rmInteger(int *i)`
 
 
-## Agencement des includes dans les fichiers `.h`
+## 3. Agencement des includes dans les fichiers `.h`
 
 Voici l'agencement des différents `#include` dans les `.h` ce trouvent dans le projet :  
 ![image non charger : Plan_des_.h.drawio.png](image/Plan_des_.h.drawio.png)  
 > Les trois derniers blocs en rose _(dp_rec.h, dp_array.h et dp_list.h)_ sont les trois `#include` à faire appel dans le `main.c` pour qu'il puisse fonctionner.
 
 
-## Agencement & avancement des fonctions
+## 4. Agencement & avancement des fonctions
 
 Voici les fonctions que nous avons réussies à faire durant le projet :  
 ![image non charger : Plan_avancement_des_fonction.drawio.png](image/Plan_avancement_des_fonction.drawio.png)
@@ -56,29 +56,29 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 > - **4ᵉ ligne** : Les fonctions qui étaient complete ou faite entièrement, mais qu'ils ne sont pas fonctionnel _("Erreur")_.
 
 
-## Fonctionnement
+## 5. Fonctionnement
 
-### Dans le makefile
+### 5.1. Dans le makefile
 Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
-#### L'exécutable
+#### 5.1.1. L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
 ```c
 _PROG = exe_projet
 ```
-#### Défini tous les `.h`
+#### 5.1.2. Défini tous les `.h`
 Nous avons fait appel à tous les `.h`.
 ```c
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
-#### Défini tout les `.o`
+#### 5.1.3. Défini tout les `.o`
 Nous avons défini tous les `.o`
 ```c
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o space_array.o dp_array.o states.o dp_list.o
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
-### À l'exécution
+### 5.2. À l'exécution
 La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette commande **ci-dessous** dans un terminal **Linux**.
 ```shell
 ./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 par exemple
