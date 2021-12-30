@@ -1,7 +1,3 @@
-//
-// Created by brice on 28/12/2021.
-//
-
 #ifndef PROJET_PROGAV_S3_OUTILS_H
 #define PROJET_PROGAV_S3_OUTILS_H
 
