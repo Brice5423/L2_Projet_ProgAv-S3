@@ -84,8 +84,8 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 ./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 par exemple
 ```
 > Dans la commande il y a des options à bien comprendre comment remplir :
-> - **mode** (R|A|L) : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
-> - **utilité** (0|1) : Défini si on défini le volume _(1)_ ou pas _(0)_. S'il n'est pas défini alors l'utilité prendra le volume comme valeur.
+> - **mode** _(R|A|L)_ : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
+> - **utilité** _(0|1)_ : Défini si on défini le volume _(1)_ ou pas _(0)_. S'il n'est pas défini alors l'utilité prendra le volume comme valeur.
 > - **VMax** : Défini le volume maximal que le sac peut avoir.
 > - **volumeN** : Volume du Nème objet.
 > - **utilitéN** : Utilité du Nème objet.
