@@ -2,6 +2,7 @@
 
 void free_states_array(struct states_array_t *states) {
     assert(states);
+
     /* Nous */
     free(states);
     states = NULL;
@@ -12,11 +13,13 @@ struct states_array_t *new_states_array(const int num_objects, const int Vmax) {
 
     NS = (struct states_array_t *) calloc(1, sizeof(struct states_array_t));
     assert(NS != NULL);
-    /*Nous (à verifier) */
+
+    /* Nous (à verifier) */
     NS->num_obj = num_objects;
     NS->VMax = Vmax;
 
     init_opt_chm(NS);
+
     return NS;
 }
 
