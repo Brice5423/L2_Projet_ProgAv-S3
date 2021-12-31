@@ -38,7 +38,7 @@ void view_object(const struct object_t *object) {
 void view_objet_set(const struct objects_t *set) {
     int o;
 
-    printf("\n*** View objet set ***\tset->nb_objects : %i (view_objet_set)\n", set->nb_objects);
+    printf("\n*** View objet set ***\n");
     for (o = 0; o < set->nb_objects; o++) {
         view_object(set->objects + o);
     }

@@ -41,14 +41,14 @@ Fonction :
 ## 3. Agencement des includes dans les fichiers `.h`
 
 Voici l'agencement des différents `#include` dans les `.h` ce trouvent dans le projet :  
-![image non charger : Plan_des_.h.drawio.png](image/Plan_des_.h.drawio.png)  
+![image non charger](image/plan_des_.h.drawio.png)  
 > Les trois derniers blocs en rose _(dp_rec.h, dp_array.h et dp_list.h)_ sont les trois `#include` à faire appel dans le `main.c` pour qu'il puisse fonctionner.
 
 
 ## 4. Agencement & avancement des fonctions
 
 Voici les fonctions que nous avons réussies à faire durant le projet :  
-![image non charger : Plan_avancement_des_fonction.drawio.png](image/Plan_avancement_des_fonction.drawio.png)
+![image non charger](image/plan_avancement_des_fonction.drawio.png)
 > Sur l'image, il y a la légende de la signification de chaque couleur.  
 > Voici Les rôles de chaque ligne :
 > - **1ᵉ ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
@@ -63,18 +63,18 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
 #### 5.1.1. L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
-```c
+```shell
 _PROG = exe_projet
 ```
 #### 5.1.2. Défini tous les `.h`
 Nous avons fait appel à tous les `.h`.
-```c
+```shell
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
 #### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o`
-```c
+```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
@@ -90,3 +90,32 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 > - **VMax** : Défini le volume maximal que le sac peut avoir.
 > - **volumeN** : Volume du Nème objet.
 > - **utilitéN** : Utilité du Nème objet.
+
+### 5.3 Test 
+
+#### 5.3.1 Récursive
+
+##### Exemple 1 - utilité = 1
+```shell
+./bin/exe_projet R 1 10 7 11 6 8 4 5
+```
+![image non charger](image/test_recursive_exe_1_utilité_1.png)
+##### Exemple 1 - utilité = 0
+```shell
+./bin/exe_projet R 0 10 7 11 6 8 4 5
+```
+![image non charger](image/test_recursive_exe_1_utilité_0.png)
+##### Exemple 2 - utilité = 1
+```shell
+./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
+```
+![image non charger](image/test_recursive_exe_2_utilité_1.png)
+##### Exemple 2 - utilité = 0
+```shell
+./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
+```
+![image non charger](image/test_recursive_exe_2_utilité_0.png)
+#### 5.3.2 Array 
+
+
+#### 5.3.3 Liste

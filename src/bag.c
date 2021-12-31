@@ -40,7 +40,7 @@ void push_object_in_bag(struct retained_t *bagpack, struct object_t *object) {
 void view_bagpack(struct retained_t *bagpack, const char *title) {
     void (*ptr_view_fct)(const struct object_t *) = &view_object;
 
-    printf("\n*****************\nVIEW BAGPACKAGING\t%s\t\tbagpack->objects_list->numElm : %i (view_bagpack)\n", title, bagpack->objects_list->numElm);
+    printf("\n*****************\nVIEW BAGPACKAGING\t%s\n", title);
     view_list(bagpack->objects_list, ptr_view_fct);
     printf("\t\tWith utilities sum = %d\n\n", bagpack->utilities_sum);
 }

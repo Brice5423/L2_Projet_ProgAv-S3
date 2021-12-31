@@ -26,7 +26,7 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
             object_set->first_idx += 1; // Nous : += 1
             prec(curr_volume, object_set, duplicata); // Nous : curr_volume, object_set, duplicata
 
-            if (bagpack->utilities_sum > best_bagpack->utilities_sum) { // Nous : bagpack->utilities_sum > best_bagpack->utilities_sum
+            if (duplicata->utilities_sum > best_bagpack->utilities_sum) { // Nous : bagpack->utilities_sum > best_bagpack->utilities_sum
                 clean_bag(best_bagpack); // Nous : best_bagpack
                 bagcpy(best_bagpack, duplicata); // Nous : best_bagpack, bagpack
             }
