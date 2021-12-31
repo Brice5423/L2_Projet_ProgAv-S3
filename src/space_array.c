@@ -69,12 +69,12 @@ void init_opt_chm(struct states_array_t *states) {
     int bag;
     int idx;
 
-    states->OPT = ...;
-    states->CHM = ...;
+    states->OPT = ...; // Nous : 
+    states->CHM = ...; // Nous : 
 
     for (obj = 1; obj <= states->num_obj; obj++) {
         for (bag = 0; bag <= states->VMax; bag++) {
-            idx = ...;
+            idx = ...; // Nous : 
 
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
