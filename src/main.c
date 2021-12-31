@@ -1,5 +1,5 @@
 #include "../include/dp_rec.h"
-//#include "../include/dp_array.h"
+#include "../include/dp_array.h"
 //#include "../include/dp_list.h"
 
 int main(int argc, char **argv) {
@@ -48,10 +48,10 @@ int main(int argc, char **argv) {
 
         free_bag(my_bag);
 
-    } /*else if (mode == 'A') {
+    } else if (mode == 'A') {
         dp_array(VMax, object_set);
 
-    } else {
+    } /*else {
         dp_list(VMax, object_set);
     }*/
 

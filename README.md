@@ -69,13 +69,13 @@ _PROG = exe_projet
 #### 5.1.2. Défini tous les `.h`
 Nous avons fait appel à tous les `.h`.
 ```c
-_DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h # global.h space_array.h dp_array.h states.h dp_list.h
+_DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
 #### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o`
 ```c
-_OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o # global.o space_array.o dp_array.o states.o dp_list.o
+_OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
