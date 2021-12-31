@@ -69,12 +69,12 @@ void init_opt_chm(struct states_array_t *states) {
     int bag;
     int idx;
 
-    states->OPT = ...; // Nous : 
-    states->CHM = ...; // Nous : 
+    states->OPT = calloc(1, sizeof(struct states_array_t)); // Nous : calloc(1, sizeof(struct states_array_t))
+    states->CHM = calloc(1, sizeof(struct states_array_t)); // Nous : calloc(1, sizeof(struct states_array_t))
 
     for (obj = 1; obj <= states->num_obj; obj++) {
         for (bag = 0; bag <= states->VMax; bag++) {
-            idx = ...; // Nous : 
+            idx = obj * states->VMax+1+bag; // Nous : obj*states->VMax+1+bag;
 
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
