@@ -44,3 +44,8 @@ void view_objet_set(const struct objects_t *set) {
     }
     printf("\n**********************\n");
 }
+
+void rmObject(struct object_t *object) {
+    assert(object);
+    free(object);
+}

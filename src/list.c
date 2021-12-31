@@ -36,21 +36,18 @@ struct list_t *listcpy(const struct list_t *L) {
     return copieL;
 }
 
-void del_list(struct list_t **L, void (*ptrF)()) {
+void del_list(struct list_t *L, void (*ptrF)()) {
     struct elmlist_t *E;
 
-    E = (*L)->head;
+    E = L->head;
 
     while (E != NULL) {
         struct elmlist_t *suc;
 
         suc = E->suc;
-        del_elmlist(E, ptrF); // free(E)
+        del_elmlist(E, ptrF); // ptrF(E) // free(E)
         E = suc;
     }
-
-    free(*L);
-    *L = NULL;
 
     free(L);
     L = NULL;

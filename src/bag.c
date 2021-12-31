@@ -16,22 +16,18 @@ void bagcpy(struct retained_t *newBagpack, const struct retained_t *bagpack) {
     newBagpack->utilities_sum = bagpack->utilities_sum;
 }
 
-void free_bag(struct retained_t **bagpack) {
-    clean_bag(*bagpack);
-
-    free((*bagpack)->objects_list);
-    (*bagpack)->objects_list = NULL;
-
-    free(*bagpack);
-    *bagpack = NULL;
-
+void free_bag(struct retained_t *bagpack) {
+    del_list(bagpack->objects_list, rmObject);
     free(bagpack);
     bagpack = NULL;
 }
 
 void clean_bag(struct retained_t *bagpack) {
     assert(bagpack);
-    del_list(&(bagpack->objects_list), &rmInteger);
+    del_list(bagpack->objects_list, &rmInteger);
+
+    bagpack->objects_list = new_list();
+    assert(bagpack->objects_list);
     bagpack->utilities_sum = 0;
 }
 

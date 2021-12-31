@@ -35,4 +35,7 @@ void view_object(const struct object_t *object);
  * (Voir sujet, diapo 13 et 15) */
 void view_objet_set(const struct objects_t *set);
 
+/** @brief Liber un object */
+void rmObject(struct object_t *object);
+
 #endif //PROJET_PROGAV_S3_OBJECTS_H

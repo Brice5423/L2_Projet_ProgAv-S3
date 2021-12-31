@@ -22,19 +22,19 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
 
         if (curr_volume >= 0) { // Nous : curr_volume >= 0
             bagcpy(duplicata, bagpack); // Nous : duplicata, bagpack
-            push_object_in_bag(bagpack, object); // Nous : bagpack, ptr_object
-            object_set->first_idx = object_idx + 1; // Nous : obj_idx + 1
+            push_object_in_bag(duplicata, object); // Nous : duplicata, ptr_object
+            object_set->first_idx += 1; // Nous : += 1
             prec(curr_volume, object_set, duplicata); // Nous : curr_volume, object_set, duplicata
 
             if (bagpack->utilities_sum > best_bagpack->utilities_sum) { // Nous : bagpack->utilities_sum > best_bagpack->utilities_sum
                 clean_bag(best_bagpack); // Nous : best_bagpack
-                bagcpy(best_bagpack, bagpack); // Nous : best_bagpack, bagpack
+                bagcpy(best_bagpack, duplicata); // Nous : best_bagpack, bagpack
             }
         }
     }
 
     clean_bag(bagpack);
     bagcpy(bagpack, best_bagpack);
-    free_bag(&best_bagpack);
-    free_bag(&duplicata);
+    free_bag(best_bagpack);
+    free_bag(duplicata);
 }
