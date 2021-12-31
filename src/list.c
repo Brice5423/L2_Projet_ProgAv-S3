@@ -6,15 +6,23 @@ struct list_t *new_list() {
     L = (struct list_t *) calloc(1, sizeof(struct list_t));
     assert(L);
 
-    L->head = NULL;
-    L->tail = NULL;
     L->numElm = 0;
 
     return L;
 }
 
 struct list_t *listcpy(const struct list_t *L) {
-    struct elmlist_t *unElmDeL;
+    struct list_t *copieL;
+
+    copieL = new_list();
+
+    for (struct elmlist_t *E = L->head; E != NULL; E = E->suc) {
+        queue(copieL, E->data);
+    }
+
+    return copieL;
+
+    /*struct elmlist_t *unElmDeL;
     struct list_t *copieL;
     int nbElm;
     int i;
@@ -33,7 +41,7 @@ struct list_t *listcpy(const struct list_t *L) {
         }
     }
 
-    return copieL;
+    return copieL;*/
 }
 
 void del_list(struct list_t *L, void (*ptrF)()) {
@@ -45,7 +53,7 @@ void del_list(struct list_t *L, void (*ptrF)()) {
         struct elmlist_t *suc;
 
         suc = E->suc;
-        del_elmlist(E, ptrF); // ptrF(E) // free(E)
+        (*ptrF)(E); // del_elmlist(E) // ptrF(E) // free(E)
         E = suc;
     }
 
@@ -80,9 +88,9 @@ void cons(struct list_t *L, void *data) {
 
     if (is_empty(L)) {
         L->tail = E;
-    } else {
+    } /*else {
         L->head->pred = E;
-    }
+    }*/
 
     E->suc = L->head;
     L->numElm++;
@@ -100,10 +108,28 @@ void queue(struct list_t *L, void *data) {
         L->tail->suc = E;
     }
 
-    E->pred = L->tail;
+    //E->pred = L->tail;
     L->numElm++;
     L->tail = E;
 }
+
+/** @brief fonction privé */
+/*void insert_after(struct list_t *L, void *data, struct elmlist_t *place) {
+    if (place == NULL)
+        cons(L, data);
+
+    else {
+        struct elmlist_t *new = new_elmlist(data);
+        assert(new);
+        new->suc = place->suc;
+        place->suc = new;
+        L->numElm++;
+
+        if (place == L->tail){
+            L->tail = new;
+        }
+    }
+}*/
 
 void insert_ordered(struct list_t *L, void *data, bool (*ptrF)()) {
     if (is_empty(L) || (*ptrF)(L->head->data, data)) {
@@ -132,7 +158,7 @@ void insert_ordered(struct list_t *L, void *data, bool (*ptrF)()) {
 void view_list(struct list_t *L, void (*ptrF)()) {
     struct elmlist_t *E;
 
-    printf("Dans fonction : view_list - numElm : %i\n", L->numElm);
+    printf("Nb élément liste : L->numElm : %i (view_list)\n", L->numElm);
 
     printf("\n");
     for (E = L->head; E != NULL; E = E->suc) {
