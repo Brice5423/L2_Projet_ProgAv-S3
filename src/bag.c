@@ -32,7 +32,7 @@ void clean_bag(struct retained_t *bagpack) {
 }
 
 void push_object_in_bag(struct retained_t *bagpack, struct object_t *object) {
-    queue(bagpack->objects_list, object);
+    cons(bagpack->objects_list, object);
     bagpack->utilities_sum += object->utility;
 }
 
