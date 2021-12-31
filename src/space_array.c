@@ -1,8 +1,8 @@
 #include "../include/space_array.h"
 
 void free_states_array(struct states_array_t *states) {
-    assert(states);
 
+    assert(states);
     /* Nous */
     free(states);
     states = NULL;
@@ -69,12 +69,12 @@ void init_opt_chm(struct states_array_t *states) {
     int bag;
     int idx;
 
-    states->OPT = calloc(1, sizeof(struct states_array_t)); // Nous : calloc(1, sizeof(struct states_array_t))
-    states->CHM = calloc(1, sizeof(struct states_array_t)); // Nous : calloc(1, sizeof(struct states_array_t))
+    states->OPT = (state_t*)calloc(states->VMax + 1 * states->num_obj + 1, sizeof(state_t));; // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
+    states->CHM = (state_t*)calloc(states->VMax + 1 * states->num_obj + 1, sizeof(state_t)); // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
 
     for (obj = 1; obj <= states->num_obj; obj++) {
         for (bag = 0; bag <= states->VMax; bag++) {
-            idx = obj * states->VMax+1+bag; // Nous : obj*states->VMax+1+bag;
+            idx = (obj * states->VMax) + bag; // Nous : (obj * states->Vmax) + bag;
 
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
