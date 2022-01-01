@@ -95,22 +95,22 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 
 #### 5.3.1 Récursive
 Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
-##### Exemple 1 - utilité = 1
+##### Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
-##### Exemple 1 - utilité = 0
+##### Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
-##### Exemple 2 - utilité = 1
+##### Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
-##### Exemple 2 - utilité = 0
+##### Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
 ```
@@ -118,22 +118,22 @@ Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _
 
 #### 5.3.2 Array 
 Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
-##### Exemple 1 - utilité = 1
+##### Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_array_exemple_1_utilité_1.jpg)
-##### Exemple 1 - utilité = 0
+##### Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_array_exemple_1_utilité_0.jpg)
-##### Exemple 2 - utilité = 1
+##### Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_array_exemple_2_utilité_1.jpg)
-##### Exemple 2 - utilité = 0
+##### Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
 ```
