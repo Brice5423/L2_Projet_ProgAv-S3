@@ -158,8 +158,6 @@ void insert_ordered(struct list_t *L, void *data, bool (*ptrF)()) {
 void view_list(struct list_t *L, void (*ptrF)()) {
     struct elmlist_t *E;
 
-    printf("Nb élément liste : L->numElm : %i (view_list)\n", L->numElm);
-
     printf("\n");
     for (E = L->head; E != NULL; E = E->suc) {
         (*ptrF)(E->data);

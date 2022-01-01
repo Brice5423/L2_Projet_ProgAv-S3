@@ -82,7 +82,7 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o d
 ### 5.2. À l'exécution
 La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette commande **ci-dessous** dans un terminal **Linux**.
 ```shell
-./exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 ... volumeN utilitéN
+./bin/exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 ... volumeN utilitéN
 ```
 > Voici les différentes options a rentrées et leur utilité :
 > - **mode** _(R|A|L)_ : Choisi la méthode d'exécution entre recursive _(R)_, array _(A)_ et liste _(L)_.
@@ -94,28 +94,50 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 ### 5.3 Test 
 
 #### 5.3.1 Récursive
-
+Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
 ##### Exemple 1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
-![image non charger](image/test_recursive_exe_1_utilité_1.png)
+![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
 ##### Exemple 1 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
-![image non charger](image/test_recursive_exe_1_utilité_0.png)
+![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
 ##### Exemple 2 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
-![image non charger](image/test_recursive_exe_2_utilité_1.png)
+![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
 ##### Exemple 2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
 ```
-![image non charger](image/test_recursive_exe_2_utilité_0.png)
-#### 5.3.2 Array 
+![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
+#### 5.3.2 Array 
+Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
+##### Exemple 1 - utilité = 1
+```shell
+./bin/exe_projet A 1 10 7 11 6 8 4 5
+```
+![image non charger](image/test_array_exemple_1_utilité_1.jpg)
+##### Exemple 1 - utilité = 0
+```shell
+./bin/exe_projet A 0 10 7 11 6 8 4 5
+```
+![image non charger](image/test_array_exemple_1_utilité_0.jpg)
+##### Exemple 2 - utilité = 1
+```shell
+./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
+```
+![image non charger](image/test_array_exemple_2_utilité_1.jpg)
+##### Exemple 2 - utilité = 0
+```shell
+./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
+```
+![image non charger](image/test_array_exemple_2_utilité_0.jpg)
 
 #### 5.3.3 Liste
+> Pas fait.
