@@ -43,11 +43,13 @@ void push_object_in_array(struct states_array_t *states, const struct objects_t 
 
         states->CHM[curr] = INFTY; //hyp.: l'objet i n'est pas dans le sac
 
-        if (objects->objects[curr].volume <= bag) { // S'il y a de la place dans le sac // Nous : objects->objects[curr].volume <= bag
+        if (objects->objects[curr].volume <=
+            bag) { // S'il y a de la place dans le sac // Nous : objects->objects[curr].volume <= bag
             int pred_without_i;
             int OPT2;
 
-            pred_without_i = (states->VMax + 1 - objects->objects[curr].volume) + bag; // L'index du bag SANS l'objet (i) // Nous : (states->VMax + 1 - objects->objects[curr].volume) + bag;
+            pred_without_i = (states->VMax + 1 - objects->objects[curr].volume) +
+                             bag; // L'index du bag SANS l'objet (i) // Nous : (states->VMax + 1 - objects->objects[curr].volume) + bag;
             OPT2 = states->OPT[pred_without_i]; // Nous : states->OPT[pred_without_i];
 
             if (OPT1 <= OPT2) { // Sélectionne la meilleur configuration // Nous : OPT1 <= OPT2
@@ -71,8 +73,10 @@ void init_opt_chm(struct states_array_t *states) {
     int bag;
     int idx;
 
-    states->OPT = (state_t*)calloc(states->VMax + 1 * states->num_obj + 1, sizeof(state_t));; // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
-    states->CHM = (state_t*)calloc(states->VMax + 1 * states->num_obj + 1, sizeof(state_t)); // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
+    states->OPT = (state_t *) calloc(states->VMax + 1 * states->num_obj + 1,
+                                     sizeof(state_t));; // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
+    states->CHM = (state_t *) calloc(states->VMax + 1 * states->num_obj + 1,
+                                     sizeof(state_t)); // Nous : (state_t *)calloc(states->VMax+1 * states->num_obj+1, sizeof(state_t));
 
     for (obj = 1; obj <= states->num_obj; obj++) {
         for (bag = 0; bag <= states->VMax; bag++) {
