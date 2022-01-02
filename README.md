@@ -60,11 +60,13 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 ## 5. Fonctionnement
 
 ### 5.1. Makefile & la commande `make`
+
 #### 5.1.1. L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
 ```shell
 _PROG = exe_projet
 ```
+
 #### 5.1.2. Défini tous les `.h`
 Nous avons fait appel à tous les `.h` dans le **Makefile** pour quand on lancera la commande `make`.  
 Voici la ligne de code dans **Makefile** :  
@@ -73,6 +75,7 @@ _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.  
 > On n'a pas fait appel aux fichiers `states.h` et `dp_list.h` car Nous n'avons pas fait la partie sur la liste.
+
 #### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.  
 Voici la ligne de code dans **Makefile** :  
@@ -81,6 +84,7 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o d
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison.  
 > On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car Nous n'avons pas fait la partie sur la liste.
+
 ### 5.1.4 Lancement de la commande `make`
 Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**.
 
@@ -97,25 +101,30 @@ Il faut lancer cette commande **ci-dessous** dans un terminal **Linux** :
 > - **volumeN** : Volume du Nème objet.
 > - **utilitéN** : Utilité du Nème objet.
 
+
 ## 6 Test du projet
 
 ### 6.1 Récursive
 Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
+
 #### 6.1.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
+
 #### 6.1.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
+
 #### 6.1.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
+
 #### 6.1.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
@@ -125,6 +134,7 @@ Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _
 ### 6.2 Array 
 Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
 > Le mode array n'est pas fonctionnel, mais affiche quelque chose _(de faux)_.
+
 #### 6.2.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
@@ -132,6 +142,7 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ![image non charger](image/test_array_exemple_1_utilité_1_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_1_utilité_1_partie_2.jpg)
+
 #### 6.2.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5
@@ -139,6 +150,7 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_2.jpg)
+
 #### 6.2.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
@@ -146,6 +158,7 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_2.jpg)
+
 #### 6.2.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
@@ -153,11 +166,14 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
+
 #### 6.2.5 Conclusion
-Comme vous avez pu le voir, le total d'utilité est de 0 pour tous les cas.
+Comme vous avez pu le voir, le total d'utilité est de 0 pour tous les cas.  
+On n'a pas réussi à déterminer l'origine de l'erreur. 
 
 ### 6.3 Liste
 Pour la partie récursive, on aura le mode `L` _(on peut mettre n'importe quel lettre sauf `R` et `A`)_ et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
+
 ### 6.3.1 Pas de test
 > **On ne peut pas faire de test, car nous n'avons pas fait la partie liste du projet _(mode `L`)_**.  
 > Pour que le projet marche sans problème nous avons mis toute la partie qui fait appel à la liste dans le `main.c` en commentaire.  
