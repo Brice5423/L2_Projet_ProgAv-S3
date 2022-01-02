@@ -74,7 +74,7 @@ Voici la ligne de code dans **Makefile** :
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.  
-> On n'a pas fait appel aux fichiers `states.h` et `dp_list.h` car Nous n'avons pas fait la partie sur la liste.
+> On n'a pas fait appel aux fichiers `states.h` et `dp_list.h` car nous n'avons pas fait la partie sur la liste.
 
 #### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.  
@@ -83,7 +83,7 @@ Voici la ligne de code dans **Makefile** :
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison.  
-> On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car Nous n'avons pas fait la partie sur la liste.
+> On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car nous n'avons pas fait la partie sur la liste.
 
 ### 5.1.4 Lancement de la commande `make`
 Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**.
