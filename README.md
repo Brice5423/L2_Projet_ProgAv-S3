@@ -9,7 +9,7 @@ ________________________
 
 ## 1. Renommage
 
-> Certaineq partieq du code ne sont pas forcément facile à comprendre ou à lire.  
+> Certaines parties du code ne sont pas forcément facile à comprendre ou à lire.  
 > Nous nous sommes donc permis de renommer certaines  fonctions, structures, variables et fichiers. Cela pour travailler dans les meilleurs conditions possible.  
 > Nous évitons de donner de nouveaux noms qui poseraient problèmes à la lecture.  
 > Dans la majorité des cas, nous allons respecter la **norme de nomination** en C, le **camelCase**.  
