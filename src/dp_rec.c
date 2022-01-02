@@ -13,7 +13,7 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
     best_bagpack = new_bag(); // Nous : new_bag()
     bagcpy(best_bagpack, bagpack); // Pred: best bag is bag // Nous : best_bagpack, bagpack
 
-    for (object_idx = object_set->first_idx; object_idx < nb_objects; object_idx++) { // Verif: Try new objects // Nous : ; object_idx < object_set->nb_objects; object_idx++
+    for (object_idx = object_set->first_idx; object_idx < nb_objects; object_idx++) { // Verif: Try new objects // Nous : ; object_idx < nb_objects; object_idx++
         struct object_t *object;
         int curr_volume;
 
