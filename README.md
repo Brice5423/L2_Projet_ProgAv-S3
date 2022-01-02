@@ -82,7 +82,7 @@ Voici la ligne de code dans **Makefile** :
 ```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
-> Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison.  
+> Comme avant, nous avons fait avant, on n'a pas défini `global.o` pour la même raison.  
 > On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car nous n'avons pas fait la partie sur la liste.
 
 ### 5.1.4 Lancement de la commande `make`
