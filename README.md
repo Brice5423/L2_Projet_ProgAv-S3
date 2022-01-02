@@ -94,64 +94,64 @@ Il faut lancer cette commande **ci-dessous** dans un terminal **Linux** :
 > - **volumeN** : Volume du Nème objet.
 > - **utilitéN** : Utilité du Nème objet.
 
-### 5.3 Test 
+## 6 Test du projet
 
-#### 5.3.1 Récursive
+### 6.1 Récursive
 Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
-##### 5.3.1.1 Exemple 1.1 - utilité = 1
+#### 6.1.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
-##### 5.3.1.2 Exemple 1.2 - utilité = 0
+#### 6.1.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
-##### 5.3.1.3 Exemple 2.1 - utilité = 1
+#### 6.1.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
-##### 5.3.1.4 Exemple 2.2 - utilité = 0
+#### 6.1.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
-#### 5.3.2 Array 
+### 6.2 Array 
 Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
 > Le mode array n'est pas fonctionnel, mais affiche quelque chose.
-##### 5.3.2.1 Exemple 1.1 - utilité = 1
+#### 6.2.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_array_exemple_1_utilité_1_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_1_utilité_1_partie_2.jpg)
-##### 5.3.2.2 Exemple 1.2 - utilité = 0
+#### 6.2.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_2.jpg)
-##### 5.3.2.3 Exemple 2.1 - utilité = 1
+#### 6.2.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_2.jpg)
-##### 5.3.2.4 Exemple 2.2 - utilité = 0
+#### 6.2.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
-##### 5.3.2.5 Conclusion
+#### 6.2.5 Conclusion
 Comme vous avez pu le voir, le total d'utilité est négatif _(-2)_ à chaque fois.
 
-#### 5.3.3 Liste
+### 6.3 Liste
 > **Pas fait**.
