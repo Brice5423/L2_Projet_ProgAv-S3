@@ -154,7 +154,7 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
 #### 6.2.5 Conclusion
-Comme vous avez pu le voir, le total d'utilité est négatif _(-2)_ à chaque fois.
+Comme vous avez pu le voir, le total d'utilité est de 0 pour tous les cas.
 
 ### 6.3 Liste
 Pour la partie récursive, on aura le mode `L` _(on peut mettre n'importe quel lettre sauf `R` et `A`)_ et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
