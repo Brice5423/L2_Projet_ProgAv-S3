@@ -67,20 +67,23 @@ Le nom de l'exécutable du projet est `exe_projet`.
 _PROG = exe_projet
 ```
 #### 5.1.2. Défini tous les `.h`
-Nous avons fait appel à tous les `.h`.
+Nous avons fait appel à tous les `.h` dans le **Makefile** pour quand on lancera la commande `make`.  
+Voici la ligne de code dans **Makefile** :  
 ```shell
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
 ```
 > On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
 #### 5.1.3. Défini tous les `.o`
-Nous avons défini tous les `.o`
+Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.  
+Voici la ligne de code dans **Makefile** :  
 ```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
 > Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
 
 ### 5.2. À l'exécution
-La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette commande **ci-dessous** dans un terminal **Linux**.
+La **deuxième étape** pour pouvoir exécuter le projet.  
+Il faut lancer cette commande **ci-dessous** dans un terminal **Linux** :
 ```shell
 ./bin/exe_projet mode utilité VMax volume1 utilité1 volume2 utilité2 ... volumeN utilitéN
 ```
@@ -95,49 +98,60 @@ La **deuxième étape** pour pouvoir exécuter le projet. Il faut lancer cette c
 
 #### 5.3.1 Récursive
 Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
-##### Exemple 1.1 - utilité = 1
+##### 5.3.1.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
-##### Exemple 1.2 - utilité = 0
+##### 5.3.1.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
 ![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
-##### Exemple 2.1 - utilité = 1
+##### 5.3.1.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
-##### Exemple 2.2 - utilité = 0
+##### 5.3.1.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
 ```
 ![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
 #### 5.3.2 Array 
-Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
-##### Exemple 1.1 - utilité = 1
+Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
+> Le mode array n'est pas fonctionnel, mais affiche quelque chose.
+##### 5.3.2.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
 ```
-![image non charger](image/test_array_exemple_1_utilité_1.jpg)
-##### Exemple 1.2 - utilité = 0
+![image non charger](image/test_array_exemple_1_utilité_1_partie_1.jpg)  
+***...*** _(Visualisation des sacs)_  
+![image non charger](image/test_array_exemple_1_utilité_1_partie_2.jpg)
+##### 5.3.2.2 Exemple 1.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5
 ```
-![image non charger](image/test_array_exemple_1_utilité_0.jpg)
-##### Exemple 2.1 - utilité = 1
+![image non charger](image/test_array_exemple_1_utilité_0_partie_1.jpg)  
+***...*** _(Visualisation des sacs)_  
+![image non charger](image/test_array_exemple_1_utilité_0_partie_2.jpg)
+##### 5.3.2.3 Exemple 2.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
 ```
-![image non charger](image/test_array_exemple_2_utilité_1.jpg)
-##### Exemple 2.2 - utilité = 0
+![image non charger](image/test_array_exemple_2_utilité_1_partie_1.jpg)  
+***...*** _(Visualisation des sacs)_  
+![image non charger](image/test_array_exemple_2_utilité_1_partie_2.jpg)
+##### 5.3.2.4 Exemple 2.2 - utilité = 0
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
 ```
-![image non charger](image/test_array_exemple_2_utilité_0.jpg)
+![image non charger](image/test_array_exemple_2_utilité_0_partie_1.jpg)  
+***...*** _(Visualisation des sacs)_  
+![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
+##### 5.3.2.5 Conclusion
+Comme vous avez pu le voir, le total d'utilité est négatif _(-2)_ à chaque fois.
 
 #### 5.3.3 Liste
-> Pas fait.
+> **Pas fait**.
