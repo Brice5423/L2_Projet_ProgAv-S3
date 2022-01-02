@@ -21,27 +21,6 @@ struct list_t *listcpy(const struct list_t *L) {
     }
 
     return copieL;
-
-    /*struct elmlist_t *unElmDeL;
-    struct list_t *copieL;
-    int nbElm;
-    int i;
-
-    copieL = (struct list_t *) calloc(1, sizeof(struct list_t));
-    //unElmDeL = (struct elmlist_t *) calloc(1, sizeof(struct elmlist_t));
-
-    nbElm = get_numelm(L);
-    unElmDeL = get_head(L);
-
-    for (i = 1; i <= nbElm; i++) {
-        queue(copieL, unElmDeL->data);
-
-        if (i != nbElm) { // pas besoin de prendre l'élément suivant, il n'y en a pas
-            unElmDeL = unElmDeL->suc;
-        }
-    }
-
-    return copieL;*/
 }
 
 void del_list(struct list_t *L, void (*ptrF)()) {
