@@ -18,7 +18,7 @@ void prec(const int VMax, struct objects_t *object_set, struct retained_t *bagpa
         int curr_volume;
 
         object = object_set->objects + object_idx; // Nous : object_set->objects + obj_idx
-        curr_volume = VMax - object->volume; // Nous : VMax - ptr_object->volume
+        curr_volume = VMax - object->volume; // Nous : VMax - object->volume
 
         if (curr_volume >= 0) { // Nous : curr_volume >= 0
             bagcpy(duplicata, bagpack); // Nous : duplicata, bagpack
