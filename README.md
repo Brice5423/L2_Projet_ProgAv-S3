@@ -178,6 +178,6 @@ Pour la partie récursive, on aura le mode `L` _(on peut mettre n'importe quel l
 
 ### 6.3.1 Pas de test
 On ne peut pas faire de test, car nous n'avons pas fait la partie liste du projet _(mode `L`)_.  
-> Pour que le projet marche sans problème nous avons mis toute la partie qui fait appel à la liste dans le `main.c` en commentaire.  
-> - Le `#include` est en commentaire. 
-> - le `else` qui permet de faire le lancement de la fonction `dp_list`.
+Pour que le projet marche sans problème nous avons mis toute la partie qui fait appel à la liste dans le `main.c` en commentaire :  
+- Le `#include` est en commentaire.  
+- le `else` qui permet de faire le lancement de la fonction `dp_list`.  
