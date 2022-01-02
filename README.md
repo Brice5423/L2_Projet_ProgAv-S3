@@ -53,8 +53,8 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 > Voici Les rôles de chaques lignes :
 > - **1ᵉ ligne** : L'état des fonctions au début du projet _("À remplir" ou "Vide")_.
 > - **2ᵉ ligne** : Les fonctions en cours de développement _("En cours")_.
-> - **3ᵉ ligne** : Les fonctions terminées. Indique si la fonction est finie et non-test _("Fini, à vérifier")_, si terminé et fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il était donné au début du TP _("Donner")_.
-> - **4ᵉ ligne** : Les fonctions qui sont complete ou faite entièrement, mais qui ne sont pas fonctionnel _("Erreur")_.
+> - **3ᵉ ligne** : Les fonctions terminées. Indique si la fonction est finie et non vérifié _("Fini, à vérifier")_, si terminé et fonctionnel _("Fini, c'est ok")_, s'il vient (inspirer) d'un TP _("Copier d'un TP")_ ou s'il était donné au début du TP _("Donner")_.
+> - **4ᵉ ligne** : Les fonctions complètes, mais non fonctionnel avec erreur identifiée _("Erreur")_.
 
 
 ## 5. Fonctionnement
@@ -82,13 +82,13 @@ Voici la ligne de code dans **Makefile** :
 ```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
-> Comme ennoncé précedemment, nous n'avons pas défini `global.o` pour la même raison que le `.h` .  
+> Comme ennoncé précedemment, nous n'avons pas défini `global.o` pour la même raison que le `.h`.  
 > Nous n'avons pas fait appel aux fichiers `states.o` et `dp_list.o` car nous n'avons pas finis la partie sur la liste.
 
 ### 5.1.4 Lancement de la commande `make`
 **Première étape** pour pouvoir exécuter le projet correctement. 
 Il faut lancer la commande `make` dans un terminal **Linux**.  
-S'il y a un ou des éléments dans le dossier `bin` et/ou dans le dossier `obj`, penser à lancer la commande `make delete` pour les vider avant le `make`
+S'il y a un ou des éléments dans le dossier `bin` et/ou dans le dossier `obj`, penser à lancer la commande `make delete` pour les vider avant le `make`.
 
 ### 5.2. À l'exécution
 **Deuxième étape** pour pouvoir exécuter le projet.  
@@ -171,7 +171,7 @@ Pour la partie récursive, nous aurons le mode `A` et nous prendrons un volume m
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
 
 #### 6.2.5 Conclusion d'erreur
-Comme vous avez pu le constater, le total d'utilité est de 0 pour tous les cas.  
+Comme vous avez pu le constater, le total d'utilité est de **0** pour tous les cas.  
 Nous n'avons pas réussi à déterminer l'origine de l'erreur pour le moment. 
 
 ### 6.3 Liste
