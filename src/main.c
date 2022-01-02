@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
         prec(VMax, object_set, my_bag);
         view_bagpack(my_bag, "Final selection");
 
-        free_bag(my_bag);
+        free_bag(my_bag); // Nous l'avons rajouté pour libérer de la mémoire
 
     } else if (mode == 'A') {
         dp_array(VMax, object_set);
@@ -55,8 +55,8 @@ int main(int argc, char **argv) {
         dp_list(VMax, object_set);
     }*/
 
-    //free_bag(retained_objects); // variable non utilisé
-    free(object_set);
+    //free_bag(retained_objects); // variable non utilisé // Nous l'avons rajouté pour libérer de la mémoire
+    free(object_set); // Nous l'avons rajouté pour libérer de la mémoire
 
     return EXIT_SUCCESS;
 }
