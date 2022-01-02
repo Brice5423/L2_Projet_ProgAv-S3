@@ -124,7 +124,7 @@ Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _
 
 ### 6.2 Array 
 Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
-> Le mode array n'est pas fonctionnel, mais affiche quelque chose.
+> Le mode array n'est pas fonctionnel, mais affiche quelque chose _(de faux)_.
 #### 6.2.1 Exemple 1.1 - utilité = 1
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
