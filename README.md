@@ -59,8 +59,7 @@ Voici les fonctions que nous avons réussies à faire durant le projet :
 
 ## 5. Fonctionnement
 
-### 5.1. Dans le makefile
-Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**. 
+### 5.1. Makefile & la commande `make`
 #### 5.1.1. L'exécutable
 Le nom de l'exécutable du projet est `exe_projet`.
 ```shell
@@ -72,14 +71,18 @@ Voici la ligne de code dans **Makefile** :
 ```shell
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
 ```
-> On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.
+> On n'a pas fait appel au fichier `global.h` car il posait problème au moment de la compilation `make`.  
+> On n'a pas fait appel aux fichiers `states.h` et `dp_list.h` car Nous n'avons pas fait la partie sur la liste.
 #### 5.1.3. Défini tous les `.o`
 Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.  
 Voici la ligne de code dans **Makefile** :  
 ```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
 ```
-> Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison. 
+> Comme avant, nous avons fait avant on n'a pas défini `global.o` pour la même raison.  
+> On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car Nous n'avons pas fait la partie sur la liste.
+### 5.1.4 Lancement de la commande `make`
+Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**.
 
 ### 5.2. À l'exécution
 La **deuxième étape** pour pouvoir exécuter le projet.  
@@ -154,4 +157,9 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 Comme vous avez pu le voir, le total d'utilité est négatif _(-2)_ à chaque fois.
 
 ### 6.3 Liste
-> **Pas fait**.
+Pour la partie récursive, on aura le mode `L` _(on peut mettre n'importe quel lettre sauf `R` et `A`)_ et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
+### 6.3.1 Pas de test
+> **On ne peut pas faire de test, car nous n'avons pas fait la partie liste du projet _(mode `L`)_**.  
+> Pour que le projet marche sans problème nous avons mis toute la partie qui fait appel à la liste dans le `main.c`.  
+> - Le `#include` est en commentaire. 
+> - le `else` qui permet de faire le lancement de la fonction `dp_list`.
