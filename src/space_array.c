@@ -77,9 +77,9 @@ void init_opt_chm(struct states_array_t *states) {
     int idx;
 
     states->OPT = (state_t *) calloc((states->VMax + 1) * (states->num_obj + 1),
-                                     sizeof(state_t));; // Nous : (state_t *)calloc((states->VMax + 1) * (states->num_obj + 1), sizeof(state_t));
+                                     sizeof(state_t));; // Nous : (state_t *) calloc((states->VMax + 1) * (states->num_obj + 1), sizeof(state_t));
     states->CHM = (state_t *) calloc((states->VMax + 1) * (states->num_obj + 1),
-                                     sizeof(state_t)); // Nous : (state_t *)calloc((states->VMax + 1) * (states->num_obj + 1), sizeof(state_t));
+                                     sizeof(state_t)); // Nous : (state_t *) calloc((states->VMax + 1) * (states->num_obj + 1), sizeof(state_t));
 
     for (obj = 1; obj <= states->num_obj; obj++) {
         for (bag = 0; bag <= states->VMax; bag++) {
