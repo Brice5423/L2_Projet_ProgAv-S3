@@ -86,7 +86,8 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o d
 > On n'a pas fait appel aux fichiers `states.o` et `dp_list.o` car nous n'avons pas fait la partie sur la liste.
 
 ### 5.1.4 Lancement de la commande `make`
-Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**.
+Dans la **première étape** pour pouvoir exécuter le projet correctement, il faut lancer la commande `make` dans un terminal **Linux**.  
+S'il y a un ou des éléments dans le dossier `bin` et/ou dans le dossier `obj`, penser à lancer la commande `make delete` pour les vidés avant le `make` dans le terminal **Linux**.
 
 ### 5.2. À l'exécution
 La **deuxième étape** pour pouvoir exécuter le projet.  
@@ -103,6 +104,7 @@ Il faut lancer cette commande **ci-dessous** dans un terminal **Linux** :
 
 
 ## 6 Test du projet
+Nous vous présentons quelque test que nous avons fait sur ce projet.
 
 ### 6.1 Récursive
 Pour la partie récursive, on aura le mode `R` et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.
@@ -167,7 +169,7 @@ Pour la partie récursive, on aura le mode `A` et on prendra un volume maximal _
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
 
-#### 6.2.5 Conclusion
+#### 6.2.5 Conclusion d'erreur
 Comme vous avez pu le voir, le total d'utilité est de 0 pour tous les cas.  
 On n'a pas réussi à déterminer l'origine de l'erreur. 
 
