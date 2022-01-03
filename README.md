@@ -148,7 +148,7 @@ Dans le cas où il y a deux possibilités d'objet avec la même valeur d'**utili
 
 Voici un exemple de ce qui arrive juste au-dessus :  
 ![image non charger](image/conclusion_recursive_exemple.jpg)
-> On aurait dû avoir le couple `(6, 11)` et `(3, 5)` qui aurais fait baiser le volume de 1.
+> On aurait dû avoir le couple `(6, 11)` et `(3, 5)` qui aurait fait baisser le volume de 1.
 
 ### 6.2 Array 
 Pour la partie récursive, nous aurons le mode `A` et nous prendrons un volume maximal _(VMax)_ de **10** pour tous les tests.  
