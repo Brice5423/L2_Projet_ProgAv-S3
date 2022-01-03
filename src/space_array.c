@@ -20,7 +20,7 @@ struct states_array_t *new_states_array(const int num_objects, const int VMax) {
     NS = (struct states_array_t *) calloc(1, sizeof(struct states_array_t));
     assert(NS != NULL);
 
-    /* ***** Nous (à verifier) ***** */
+    /* ***** Nous ***** */
     NS->num_obj = num_objects;
     NS->VMax = VMax;
     /* ***************************** */
