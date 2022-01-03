@@ -111,27 +111,35 @@ Nous vous présentons quelque test que nous avons effectué sur le projet.
 Pour la partie récursive, nous aurons le mode `R` et nous prendrons un volume maximal _(VMax)_ de **10** pour tous les tests.
 
 #### 6.1.1 Exemple 1.1 - utilité = 1
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5
 ```
+Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_1_utilité_1.jpg)
 
 #### 6.1.2 Exemple 1.2 - utilité = 0
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5
 ```
+Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_1_utilité_0.jpg)
 
 #### 6.1.3 Exemple 2.1 - utilité = 1
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet R 1 10 7 11 6 8 4 5 3 11
 ```
+Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_2_utilité_1.jpg)
 
 #### 6.1.4 Exemple 2.2 - utilité = 0
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet R 0 10 7 11 6 8 4 5 3 11
 ```
+Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
 ### 6.2 Array 
@@ -139,33 +147,41 @@ Pour la partie récursive, nous aurons le mode `A` et nous prendrons un volume m
 > Le mode array n'est pas fonctionnel, mais affiche quelque chose _(de faux)_.
 
 #### 6.2.1 Exemple 1.1 - utilité = 1
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5
 ```
-![image non charger](image/test_array_exemple_1_utilité_1_partie_1.jpg)  
-***...*** _(Visualisation des sacs)_  
+Voici le résultat du test (visualisation complete) :
+![image non charger](image/test_array_exemple_1_utilité_1_partie_1.jpg)   
 ![image non charger](image/test_array_exemple_1_utilité_1_partie_2.jpg)
+![image non charger](image/test_array_exemple_1_utilité_1_partie_3.jpg)
 
 #### 6.2.2 Exemple 1.2 - utilité = 0
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5
 ```
+Voici le résultat du test (visualisation partielle) :
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_1_utilité_0_partie_2.jpg)
 
 #### 6.2.3 Exemple 2.1 - utilité = 1
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet A 1 10 7 11 6 8 4 5 3 11
 ```
+Voici le résultat du test (visualisation partielle) :
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_1_partie_2.jpg)
 
 #### 6.2.4 Exemple 2.2 - utilité = 0
+Voici la commande pour le premier test :
 ```shell
 ./bin/exe_projet A 0 10 7 11 6 8 4 5 3 11
 ```
+Voici le résultat du test (visualisation partielle) :
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_1.jpg)  
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
