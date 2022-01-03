@@ -143,8 +143,8 @@ Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
 #### 6.1.5 Conclusion
-La méthode récursive, un défaut qui peut lui faire défaut.  
-C'est dans le cas où il y a deux possibilités avec la même valeur d'**utilité**. Dans ce cas, il enverra le premier sac qui est venu sans prendre compte si le deuxième sac était moins vide que le premier.  
+La méthode récursive a un defaut.
+Dans le cas où il y a deux possibilités d'objet avec la même valeur d'**utilité**, il enverra le premier sac qui est venu sans prendre compte si le deuxième sac était moins vide que le premier.  
 
 Voici un exemple de ce qui arrive juste au-dessus :  
 ![image non charger](image/conclusion_recursive_exemple.jpg)
