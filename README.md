@@ -47,7 +47,7 @@ Voici l'agencement des différents `#include` dans les `.h` qui se trouvent dans
 
 ## 4. Agencement & avancement des fonctions
 
-Voici les fonctions que nous avons réussies à faire durant le projet :  
+Voici les fonctions que nous avons réussies à faire durant le projet :
 ![image non charger](image/plan_avancement_des_fonction.drawio.png)
 > Sur l'image, il y a la légende de la signification de chaques couleurs.  
 > Voici Les rôles de chaques lignes :
@@ -86,7 +86,7 @@ _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o d
 > Nous n'avons pas fait appel aux fichiers `states.o` et `dp_list.o` car nous n'avons pas finis la partie sur la liste.
 
 ### 5.1.4 Lancement de la commande `make`
-**Première étape** pour pouvoir exécuter le projet correctement. 
+**Première étape** pour pouvoir exécuter le projet correctement.  
 Il faut lancer la commande `make` dans un terminal **Linux**.  
 S'il y a un ou des éléments dans le dossier `bin` et/ou dans le dossier `obj`, penser à lancer la commande `make delete` pour les vider avant le `make`.
 
@@ -144,8 +144,8 @@ Voici le résultat du test :
 
 #### 6.1.5 Conclusion
 La méthode récursive, un défaut qui peut lui faire défaut.  
-C'est dans le cas où il y a deux possibilités avec la même valeur d'**utilité**.
-Dans ce cas, il enverra le premier sac qui est venu sans prendre compte si le deuxième sac était moins vide que le premier.  
+C'est dans le cas où il y a deux possibilités avec la même valeur d'**utilité**. Dans ce cas, il enverra le premier sac qui est venu sans prendre compte si le deuxième sac était moins vide que le premier.  
+
 Voici un exemple de ce qui arrive juste au-dessus :  
 ![image non charger](image/conclusion_recursive_exemple.jpg)
 > On aurait dû avoir le couple `(6, 11)` et `(3, 5)` qui aurais fait baiser le volume de 1.
