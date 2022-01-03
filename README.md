@@ -142,6 +142,14 @@ Voici la commande pour le premier test :
 Voici le résultat du test :
 ![image non charger](image/test_recursive_exemple_2_utilité_0.jpg)
 
+#### 6.1.5 Conclusion
+La méthode récursive, un défaut qui peut lui faire défaut.  
+C'est dans le cas où il y a deux possibilités avec la même valeur d'**utilité**.
+Dans ce cas, il enverra le premier sac qui est venu sans prendre compte si le deuxième sac était moins vide que le premier.  
+Voici un exemple de ce qui arrive juste au-dessus :  
+![image non charger](image/conclusion_recursive_exemple.jpg)
+> On aurait dû avoir le couple `(6, 11)` et `(3, 5)` qui aurais fait baiser le volume de 1.
+
 ### 6.2 Array 
 Pour la partie récursive, nous aurons le mode `A` et nous prendrons un volume maximal _(VMax)_ de **10** pour tous les tests.  
 > Le mode array n'est pas fonctionnel, mais affiche quelque chose _(de faux)_.
@@ -186,9 +194,15 @@ Voici le résultat du test (visualisation partielle) :
 ***...*** _(Visualisation des sacs)_  
 ![image non charger](image/test_array_exemple_2_utilité_0_partie_2.jpg)
 
-#### 6.2.5 Conclusion d'erreur
-Comme vous avez pu le constater, le total d'utilité est de **0** pour tous les cas.  
-Nous n'avons pas réussi à déterminer l'origine de l'erreur pour le moment. 
+#### 6.2.5 Conclusion
+La méthode array a aussi un défaut du même style que du côté de la méthode récursive.  
+C'est dans le cas où il y a deux possibilités avec la même valeur d'**utilité**. Dans ce cas, il enverra le dernier sac qui est venu sans prendre compte si les sacs d'avant était moins vide que le dernier.  
+
+Voici un exemple de ce qui arrive juste au-dessus :  
+![image non charger](image/conclusion_recursive_exemple_partie_1.jpg)  
+***...*** _(Visualisation des sacs)_  
+![image non charger](image/conclusion_recursive_exemple_partie_2.jpg)  
+> On aurait dû avoir le couple `(6, 11)` et `(3, 5)` qui aurais fait baiser le volume de 1.  
 
 ### 6.3 Liste
 Pour la partie récursive, nous aurons le mode `L` _(on peut mettre n'importe quel lettre sauf `R` et `A`)_ et on prendra un volume maximal _(VMax)_ de **10** pour tous les tests.  
