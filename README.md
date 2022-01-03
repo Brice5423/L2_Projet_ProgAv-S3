@@ -68,7 +68,7 @@ _PROG = exe_projet
 ```
 
 #### 5.1.2. Défini tous les `.h`
-Nous avons fait appel à tous les `.h` dans le **Makefile** pour le lancement de la commande `make`.  
+Nous avons fait appel à tous les `.h` dans le **Makefile** pour le lancement de la commande `make`.
 Voici la ligne de code dans **Makefile** :  
 ```shell
 _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array.h # global.h states.h dp_list.h
@@ -77,7 +77,7 @@ _DEP = outils.h objects.h elmlist.h list.h bag.h dp_rec.h space_array.h dp_array
 > Nous n'avons pas fait appel aux fichiers `states.h` et `dp_list.h` car nous n'avons pas finis la partie sur la liste.
 
 #### 5.1.3. Défini tous les `.o`
-Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.  
+Nous avons défini tous les `.o` dans le **Makefile** pour quand on lancera la commande `make`.
 Voici la ligne de code dans **Makefile** :  
 ```shell
 _OBJ = main.o outils.o objects.o elmlist.o list.o bag.o dp_rec.o space_array.o dp_array.o # global.o states.o dp_list.o
